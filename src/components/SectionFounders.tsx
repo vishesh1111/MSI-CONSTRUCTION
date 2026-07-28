@@ -4,11 +4,7 @@ import Reveal from "./Reveal";
 
 export default function SectionFounders() {
   const founders = [
-    {
-      name: "MRITUNJAY",
-      role: "Visionary",
-      image: "/img/m.jpg"
-    },
+
     {
       name: "MOHD. TAUSIF",
       role: "Visionary",

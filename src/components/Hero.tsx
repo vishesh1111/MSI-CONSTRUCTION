@@ -13,7 +13,7 @@ export default function Hero() {
           <div className={styles.titleArea}>
             <h1 className={styles.title}>
               Awesome Interior<br />
-              <span className={styles.accent}>Designing Services</span><br />
+              <span className={styles.accent}>Designing & Construction Services</span><br />
               For Your Home
             </h1>
             <p className={styles.description}>
