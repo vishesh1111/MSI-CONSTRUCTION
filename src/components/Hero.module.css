@@ -82,7 +82,7 @@
   z-index: 2;
 }
 
-.heroNav button {
+.heroNav .btn {
   background: transparent;
   border: 1px solid rgba(212, 175, 55, 0.3);
   color: var(--text-secondary);
@@ -94,9 +94,11 @@
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.heroNav button::before {
+.heroNav .btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -110,16 +112,16 @@
   z-index: 0;
 }
 
-.heroNav button span {
+.heroNav .btn span {
   position: relative;
   z-index: 1;
 }
 
-.heroNav button:hover::before, .heroNav button.active::before {
+.heroNav .btn:hover::before, .heroNav .btn.active::before {
   transform: scaleY(1);
 }
 
-.heroNav button:hover, .heroNav button.active {
+.heroNav .btn:hover, .heroNav .btn.active {
   color: var(--bg-primary);
   border-color: var(--accent-gold);
 }

@@ -23,10 +23,10 @@ export default function Hero() {
           <div className={styles.navArea}>
             <div className={styles.largeBgText}>MS</div>
             <nav className={styles.heroNav}>
-              <button className={styles.active}><span>ALL WORKS</span></button>
-              <button><span>RESIDENTIAL</span></button>
-              <button><span>COMMERCIAL</span></button>
-              <button><span>RESTORATION</span></button>
+              <Link href="/projects?filter=ALL+WORKS" className={`${styles.btn} ${styles.active}`}><span>ALL WORKS</span></Link>
+              <Link href="/projects?filter=RESIDENTIAL" className={styles.btn}><span>RESIDENTIAL</span></Link>
+              <Link href="/projects?filter=COMMERCIAL" className={styles.btn}><span>COMMERCIAL</span></Link>
+              <Link href="/projects?filter=RESTORATION" className={styles.btn}><span>RESTORATION</span></Link>
             </nav>
           </div>
         </Reveal>

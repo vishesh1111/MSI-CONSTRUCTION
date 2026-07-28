@@ -19,13 +19,27 @@ interface ProjectsGalleryProps {
 }
 
 export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
-  const [activeCategory, setActiveCategory] = useState<string>("RESIDENTIAL");
+  const [activeCategory, setActiveCategory] = useState<string>("ALL WORKS");
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<ProjectImage | null>(null);
   const [mounted, setMounted] = useState(false);
 
+  const categories = ["ALL WORKS", "RESIDENTIAL", "COMMERCIAL", "OTHERS"];
+
   useEffect(() => {
     setMounted(true);
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const filterParam = params.get("filter");
+      if (filterParam) {
+        const formatted = filterParam.toUpperCase();
+        if (categories.includes(formatted)) {
+          setActiveCategory(formatted);
+        } else if (formatted === 'RESTORATION') {
+          setActiveCategory("OTHERS");
+        }
+      }
+    }
   }, []);
 
   const categories = ["ALL WORKS", "RESIDENTIAL", "COMMERCIAL", "OTHERS"];
