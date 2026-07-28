@@ -60,10 +60,25 @@
 }
 
 .serviceTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   color: var(--accent-gold);
   margin-bottom: 1rem;
+}
+
+.serviceIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.serviceIcon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .serviceDesc {

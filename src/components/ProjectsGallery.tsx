@@ -20,7 +20,7 @@ interface ProjectsGalleryProps {
 
 export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
   const [activeCategory, setActiveCategory] = useState<string>("RESIDENTIAL");
-  const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
+  const [activeSubcategory, setActiveSubcategory] = useState<string | null>("Bedroom");
   const [selectedImage, setSelectedImage] = useState<ProjectImage | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -35,8 +35,14 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
         const formatted = filterParam.toUpperCase();
         if (categories.includes(formatted)) {
           setActiveCategory(formatted);
+          if (formatted !== "RESIDENTIAL") {
+            setActiveSubcategory(null);
+          } else {
+            setActiveSubcategory("Bedroom");
+          }
         } else if (formatted === 'RESTORATION') {
           setActiveCategory("OTHERS");
+          setActiveSubcategory(null);
         }
       }
     }
@@ -67,7 +73,11 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
 
   const handleCategoryClick = (category: string) => {
     setActiveCategory(category);
-    setActiveSubcategory(null);
+    if (category === "RESIDENTIAL") {
+      setActiveSubcategory("Bedroom");
+    } else {
+      setActiveSubcategory(null);
+    }
   };
 
   const lightboxElement = (
@@ -163,10 +173,11 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
             {filteredProjects.map((project, idx) => (
               <motion.div
                 layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, delay: Math.min(idx * 0.05, 0.5) }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: (idx % 3) * 0.1 }}
                 key={project.src}
                 className={styles.masonryItem}
                 onClick={() => setSelectedImage(project)}

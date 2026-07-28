@@ -189,6 +189,14 @@
     gap: 4rem;
   }
   
+  .transContent {
+    order: 2;
+  }
+  
+  .transForm {
+    order: 1;
+  }
+  
   .transTitle {
     font-size: 2.5rem;
   }

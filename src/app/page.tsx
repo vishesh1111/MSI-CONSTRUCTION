@@ -11,7 +11,7 @@ export default function Home() {
       <main>
         <Hero />
         <SectionProcess />
-        <SectionFounders />
+        <SectionFounders isHomepage={true} />
       </main>
       <Footer />
     </>

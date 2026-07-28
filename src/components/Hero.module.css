@@ -95,7 +95,11 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .heroNav .btn::before {
@@ -358,7 +362,12 @@
     font-size: 3rem;
   }
   .heroNav {
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .heroNav .btn {
+    width: 100%;
   }
   .statsRow {
     flex-direction: column;

@@ -5,28 +5,7 @@ import SectionFounders from "@/components/SectionFounders";
 import styles from "./About.module.css";
 
 export default function AboutPage() {
-  const services = [
-    {
-      title: "Hotel, Hostel & Hospitality Construction",
-      desc: "From boutique hotels to large hostels, we execute the construction of hospitality spaces that are not only functional but also inviting and efficient."
-    },
-    {
-      title: "Residential Construction",
-      desc: "We build dream homes with careful attention to detail, delivering bespoke, high-quality residential projects that match our clients' exact specifications."
-    },
-    {
-      title: "Commercial Buildings & Offices",
-      desc: "We handle office and commercial space construction, ensuring the perfect combination of functionality, comfort, and design that meets business needs."
-    },
-    {
-      title: "Institutional Construction",
-      desc: "We are skilled in constructing schools, hospitals, and other institutional buildings, ensuring safety, accessibility, and compliance with all regulations."
-    },
-    {
-      title: "Farmhouses & Specialized Properties",
-      desc: "Whether it's a luxurious farmhouse or a specialized project, we provide expert execution for unique and custom property builds."
-    }
-  ];
+
 
   const whyChooseUs = [
     {
@@ -68,47 +47,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main className={styles.main}>
-        {/* New Animated Core Services Section */}
-        <section className={styles.servicesSection}>
-          <div className={styles.container}>
-            <Reveal>
-              <h2 className={styles.sectionTitle}>
-                OUR CORE SERVICES <span className={styles.italic}>INCLUDE:</span>
-              </h2>
-              <div className={styles.titleLine}></div>
-              <h3 className={styles.subHeading}>Building Construction:</h3>
-            </Reveal>
 
-            <div className={styles.servicesGrid}>
-              {services.map((service, index) => (
-                <Reveal key={index} delay={index * 150} className={styles.serviceCard}>
-                  <h4 className={styles.serviceTitle}>{service.title}</h4>
-                  <p className={styles.serviceDesc}>{service.desc}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* New Investment / Responsibility Section */}
-        <section className={styles.manifestoSection}>
-          <div className={styles.container}>
-            <Reveal className={styles.manifestoBox}>
-              <h2 className={styles.manifestoTitle}>
-                YOUR INVESTMENT <span className={styles.italic}>OUR RESPONSIBILITY</span>
-              </h2>
-              <div className={styles.manifestoTextGroup}>
-                <p>
-                  MSI CONSTRUCTION, led by Mr. Tausif, is a distinguished name in the construction and interior execution industry. Specializing in the precise and high-quality execution of building construction and interior work, MSI CONSTRUCTION has earned a reputation for delivering projects on time and within budget while maintaining the highest standards of craftsmanship and attention to detail.
-                </p>
-                <p>
-                  At MSI CONSTRUCTION, we focus on execution, not design. Our expertise lies in bringing architectural and interior design plans to life with flawless implementation. Whether it's constructing hotels, hostels, hospitals, schools, office buildings, or custom dream homes, we handle every aspect of the construction process with precision. Additionally, we are specialists in executing comprehensive interior work, ensuring that every space we work on is both functional and aesthetically pleasing.
-                </p>
-                <div className={styles.manifestoLink}>www.msiconstruction.in</div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
 
         {/* New Why Choose Us Timeline */}
         <section className={styles.whySection}>
@@ -131,6 +70,27 @@ export default function AboutPage() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+
+        {/* New Investment / Responsibility Section */}
+        <section className={styles.manifestoSection}>
+          <div className={styles.container}>
+            <Reveal className={styles.manifestoBox}>
+              <h2 className={styles.manifestoTitle}>
+                YOUR INVESTMENT <span className={styles.italic}>OUR RESPONSIBILITY</span>
+              </h2>
+              <div className={styles.manifestoTextGroup}>
+                <p>
+                  MSI CONSTRUCTION, led by Mr. Tausif, is a distinguished name in the construction and interior execution industry. Specializing in the precise and high-quality execution of building construction and interior work, MSI CONSTRUCTION has earned a reputation for delivering projects on time and within budget while maintaining the highest standards of craftsmanship and attention to detail.
+                </p>
+                <p>
+                  At MSI CONSTRUCTION, we focus on execution, not design. Our expertise lies in bringing architectural and interior design plans to life with flawless implementation. Whether it's constructing hotels, hostels, hospitals, schools, office buildings, or custom dream homes, we handle every aspect of the construction process with precision. Additionally, we are specialists in executing comprehensive interior work, ensuring that every space we work on is both functional and aesthetically pleasing.
+                </p>
+                <div className={styles.manifestoLink}>www.msiconstruction.in</div>
+              </div>
+            </Reveal>
           </div>
         </section>
 
