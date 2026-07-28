@@ -7,10 +7,30 @@ import styles from "./HeroCarousel.module.css";
 import Reveal from "./Reveal";
 
 const showcaseImages = [
-  { src: "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png", alt: "Exterior" },
-  { src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png", alt: "Living Room" },
-  { src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png", alt: "Kitchen" },
-  { src: "/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png", alt: "Wardrobe" }
+  { 
+    src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png", 
+    ref: "REF NO. 815-LAND",
+    title: "ZEN COURTYARD",
+    meta: "8,500 SQ FT • OUTDOOR SANCTUARY • 2022"
+  },
+  { 
+    src: "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png", 
+    ref: "REF NO. 920-EXT",
+    title: "URBAN FACADE",
+    meta: "12,000 SQ FT • EXTERIOR ARCHITECTURE • 2024"
+  },
+  { 
+    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png", 
+    ref: "REF NO. 402-KIT",
+    title: "CULINARY HAVEN",
+    meta: "1,200 SQ FT • MODERN INTERIOR • 2023"
+  },
+  { 
+    src: "/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png", 
+    ref: "REF NO. 118-WAR",
+    title: "BESPOKE CLOSET",
+    meta: "800 SQ FT • CUSTOM MILLWORK • 2023"
+  }
 ];
 
 const slideVariants = {
@@ -63,7 +83,7 @@ export default function HeroCarousel() {
     if (isPaused) return;
     const interval = setInterval(() => {
       paginate(1);
-    }, 3000);
+    }, 4000); // 4 seconds duration to allow zoom to be visible
     return () => clearInterval(interval);
   }, [isPaused, paginate]);
 
@@ -97,7 +117,7 @@ export default function HeroCarousel() {
   return (
     <Reveal className={styles.carouselContainer} delay={200}>
       <div 
-        className={styles.carouselWrapper}
+        className={`${styles.carouselWrapper} ${isPaused ? styles.isPaused : ''}`}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
@@ -123,34 +143,33 @@ export default function HeroCarousel() {
             onDragEnd={handleDragEnd}
             className={styles.slideWrapper}
           >
-            <Image
-              src={currentImage.src}
-              alt={currentImage.alt}
-              fill
-              className={styles.img}
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              priority={true}
-            />
+            <div className={styles.imgContainer}>
+              <Image
+                src={currentImage.src}
+                alt={currentImage.title}
+                fill
+                className={styles.img}
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                priority={true}
+              />
+            </div>
+            
             <div className={styles.overlay}>
-              <span className={styles.imageAlt}>{currentImage.alt}</span>
+              <div className={styles.contentFrame}>
+                <div className={styles.cornerTopLeft} />
+                <div className={styles.cornerTopRight} />
+                <div className={styles.cornerBottomLeft} />
+                <div className={styles.cornerBottomRight} />
+                
+                <div className={styles.textContent}>
+                  <span className={styles.refText}>{currentImage.ref}</span>
+                  <h3 className={styles.titleText}>{currentImage.title}</h3>
+                  <span className={styles.metaText}>{currentImage.meta}</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
-
-        <button 
-          className={`${styles.arrowBtn} ${styles.prev}`} 
-          onClick={() => { paginate(-1); handleInteraction(); }}
-          aria-label="Previous image"
-        >
-          ‹
-        </button>
-        <button 
-          className={`${styles.arrowBtn} ${styles.next}`} 
-          onClick={() => { paginate(1); handleInteraction(); }}
-          aria-label="Next image"
-        >
-          ›
-        </button>
 
         <div className={styles.dotsContainer}>
           {showcaseImages.map((_, idx) => (
@@ -162,6 +181,9 @@ export default function HeroCarousel() {
             />
           ))}
         </div>
+        
+        {/* Progress Bar */}
+        <div key={`progress-${page}`} className={styles.progressBar} />
       </div>
     </Reveal>
   );
