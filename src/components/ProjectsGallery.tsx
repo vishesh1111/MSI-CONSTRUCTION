@@ -42,7 +42,7 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
     }
   }, []);
 
-  const categories = ["ALL WORKS", "RESIDENTIAL", "COMMERCIAL", "OTHERS"];
+
   
   // Extract unique subcategories for Residential
   const residentialSubcategories = Array.from(
