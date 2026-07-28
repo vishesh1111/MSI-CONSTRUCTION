@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./Hero.module.css";
 import Reveal from "./Reveal";
 import AnimatedCounter from "./AnimatedCounter";
+import HeroCarousel from "./HeroCarousel";
 
 export default function Hero() {
   return (
@@ -26,29 +27,11 @@ export default function Hero() {
               <Link href="/projects?filter=ALL+WORKS" className={`${styles.btn} ${styles.active}`}><span>ALL WORKS</span></Link>
               <Link href="/projects?filter=RESIDENTIAL" className={styles.btn}><span>RESIDENTIAL</span></Link>
               <Link href="/projects?filter=COMMERCIAL" className={styles.btn}><span>COMMERCIAL</span></Link>
-              <Link href="/projects?filter=RESTORATION" className={styles.btn}><span>RESTORATION</span></Link>
             </nav>
           </div>
         </Reveal>
 
-        <Reveal className={styles.grid} delay={200}>
-          <div className={styles.gridCol1}>
-            <div className={styles.imageWrapper1}>
-              <Image src="/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png" alt="Exterior" fill className={styles.img} />
-            </div>
-            <div className={styles.imageWrapper2}>
-              <Image src="/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png" alt="Living Room" fill className={styles.img} />
-            </div>
-          </div>
-          <div className={styles.gridCol2}>
-            <div className={styles.imageWrapper3}>
-              <Image src="/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png" alt="Kitchen" fill className={styles.img} />
-            </div>
-            <div className={styles.imageWrapper4}>
-              <Image src="/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png" alt="Wardrobe" fill className={styles.img} />
-            </div>
-          </div>
-        </Reveal>
+        <HeroCarousel />
 
         <Reveal className={styles.ctaGroup} delay={300}>
           <Link href="/projects" className={styles.btnPrimary}>
