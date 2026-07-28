@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link href="/#home" className={activeSection === "home" ? styles.active : ""}>HOME</Link>
               <Link href="/about" className={activeSection === "about" || activeSection === "about-2" ? styles.active : ""}>ABOUT</Link>
               <Link href="/services" className={activeSection === "services" ? styles.active : ""}>SERVICES</Link>
-              <Link href="/projects" className={activeSection === "projects" ? styles.active : ""}>PROJECTS</Link>
+              <Link href="/projects?filter=RESIDENTIAL" className={activeSection === "projects" ? styles.active : ""}>PROJECTS</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
               <Link href="/contact" className={activeSection === "contact" ? styles.active : ""}>CONTACT</Link>
             </nav>

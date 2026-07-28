@@ -28,7 +28,7 @@ export default function Footer() {
               <Link href="/">HOME</Link>
               <Link href="/about">ABOUT</Link>
               <Link href="/services">SERVICES</Link>
-              <Link href="/projects">PROJECTS</Link>
+              <Link href="/projects?filter=RESIDENTIAL">PROJECTS</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
               <Link href="/contact">CONTACT</Link>
             </div>

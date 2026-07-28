@@ -34,7 +34,7 @@ export default function Hero() {
         <HeroCarousel />
 
         <Reveal className={styles.ctaGroup} delay={300}>
-          <Link href="/projects" className={styles.btnPrimary}>
+          <Link href="/projects?filter=RESIDENTIAL" className={styles.btnPrimary}>
             <span>VIEW YOUR PROJECTS</span>
           </Link>
           <Link href="/contact" className={styles.btnSecondary}>

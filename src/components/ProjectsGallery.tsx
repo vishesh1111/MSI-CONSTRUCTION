@@ -19,7 +19,7 @@ interface ProjectsGalleryProps {
 }
 
 export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
-  const [activeCategory, setActiveCategory] = useState<string>("ALL WORKS");
+  const [activeCategory, setActiveCategory] = useState<string>("RESIDENTIAL");
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<ProjectImage | null>(null);
   const [mounted, setMounted] = useState(false);
