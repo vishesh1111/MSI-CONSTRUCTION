@@ -20,7 +20,7 @@ const showcaseImages = [
     meta: "12,000 SQ FT • EXTERIOR ARCHITECTURE • 2024"
   },
   { 
-    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_29_42 AM.png", 
+    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png", 
     ref: "REF NO. 402-KIT",
     title: "KITCHEN",
     meta: "1,200 SQ FT • MODERN INTERIOR • 2023"
@@ -62,7 +62,7 @@ const showcaseImages = [
     meta: "15,000 SQ FT • LANDSCAPE DESIGN • 2023"
   },
   {
-    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_30_01 AM.png",
+    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_30_55 AM.png",
     ref: "REF NO. 403-KIT",
     title: "PANTRY",
     meta: "400 SQ FT • FUNCTIONAL STORAGE • 2024"
@@ -206,7 +206,6 @@ export default function HeroCarousel() {
                 <div className={styles.cornerBottomRight} />
                 
                 <div className={styles.textContent}>
-                  <span className={styles.refText}>{currentImage.ref}</span>
                   <h3 className={styles.titleText}>{currentImage.title}</h3>
                   <span className={styles.metaText}>{currentImage.meta}</span>
                 </div>
