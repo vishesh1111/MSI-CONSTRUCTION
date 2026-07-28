@@ -10,26 +10,74 @@ const showcaseImages = [
   { 
     src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png", 
     ref: "REF NO. 815-LAND",
-    title: "ZEN COURTYARD",
+    title: "COURTYARD",
     meta: "8,500 SQ FT • OUTDOOR SANCTUARY • 2022"
   },
   { 
     src: "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png", 
     ref: "REF NO. 920-EXT",
-    title: "URBAN FACADE",
+    title: "FACADE",
     meta: "12,000 SQ FT • EXTERIOR ARCHITECTURE • 2024"
   },
   { 
-    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png", 
+    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_29_42 AM.png", 
     ref: "REF NO. 402-KIT",
-    title: "CULINARY HAVEN",
+    title: "KITCHEN",
     meta: "1,200 SQ FT • MODERN INTERIOR • 2023"
   },
   { 
     src: "/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png", 
     ref: "REF NO. 118-WAR",
-    title: "BESPOKE CLOSET",
+    title: "CLOSET",
     meta: "800 SQ FT • CUSTOM MILLWORK • 2023"
+  },
+  {
+    src: "/GPT/Residential/Bedroom/ChatGPT Image Jul 28, 2026, 06_31_04 AM.png",
+    ref: "REF NO. 304-BED",
+    title: "BEDROOM",
+    meta: "1,500 SQ FT • PRIVATE RETREAT • 2024"
+  },
+  {
+    src: "/GPT/Residential/Bathroom/ChatGPT Image Jul 28, 2026, 06_31_00 AM.png",
+    ref: "REF NO. 550-BTH",
+    title: "BATHROOM",
+    meta: "600 SQ FT • SPA INSPIRED • 2023"
+  },
+  {
+    src: "/GPT/Residential/Staircase/ChatGPT Image Jul 28, 2026, 06_56_32 AM.png",
+    ref: "REF NO. 210-STR",
+    title: "STAIRCASE",
+    meta: "300 SQ FT • ARCHITECTURAL FEATURE • 2022"
+  },
+  {
+    src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_30_45 AM.png",
+    ref: "REF NO. 816-LIV",
+    title: "LIVING SPACE",
+    meta: "2,000 SQ FT • OPEN CONCEPT • 2024"
+  },
+  {
+    src: "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_29_33 AM.png",
+    ref: "REF NO. 921-EXT",
+    title: "EXTERIOR",
+    meta: "15,000 SQ FT • LANDSCAPE DESIGN • 2023"
+  },
+  {
+    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_30_01 AM.png",
+    ref: "REF NO. 403-KIT",
+    title: "PANTRY",
+    meta: "400 SQ FT • FUNCTIONAL STORAGE • 2024"
+  },
+  {
+    src: "/GPT/Residential/Bedroom/ChatGPT Image Jul 28, 2026, 06_53_16 AM.png",
+    ref: "REF NO. 305-BED",
+    title: "MASTER SUITE",
+    meta: "2,200 SQ FT • LUXURY LIVING • 2023"
+  },
+  {
+    src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_53_04 AM.png",
+    ref: "REF NO. 817-LIV",
+    title: "LOUNGE",
+    meta: "1,800 SQ FT • ENTERTAINMENT HUB • 2022"
   }
 ];
 
@@ -71,12 +119,12 @@ export default function HeroCarousel() {
     setPage([index, index > currentIndex ? 1 : -1]);
   };
 
-  const handleInteraction = () => {
+  const handleHover = () => {
     setIsPaused(true);
-    if (timerRef.current) clearInterval(timerRef.current);
+    if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => {
       setIsPaused(false);
-    }, 5000);
+    }, 1000); // pause for just 1 second on hover, then resume automatically
   };
 
   useEffect(() => {
@@ -91,10 +139,10 @@ export default function HeroCarousel() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
         paginate(1);
-        handleInteraction();
+        handleHover();
       } else if (e.key === "ArrowLeft") {
         paginate(-1);
-        handleInteraction();
+        handleHover();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -105,10 +153,10 @@ export default function HeroCarousel() {
     const swipe = swipePower(offset.x, velocity.x);
     if (swipe < -swipeConfidenceThreshold) {
       paginate(1);
-      handleInteraction();
+      handleHover();
     } else if (swipe > swipeConfidenceThreshold) {
       paginate(-1);
-      handleInteraction();
+      handleHover();
     }
   };
 
@@ -118,12 +166,8 @@ export default function HeroCarousel() {
     <Reveal className={styles.carouselContainer} delay={200}>
       <div 
         className={`${styles.carouselWrapper} ${isPaused ? styles.isPaused : ''}`}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        onTouchStart={() => setIsPaused(true)}
-        onTouchEnd={() => {
-          setTimeout(() => setIsPaused(false), 3000);
-        }}
+        onMouseEnter={handleHover}
+        onTouchStart={handleHover}
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -176,7 +220,7 @@ export default function HeroCarousel() {
             <button
               key={idx}
               className={`${styles.dot} ${idx === currentIndex ? styles.activeDot : ""}`}
-              onClick={() => { goToSlide(idx); handleInteraction(); }}
+              onClick={() => { goToSlide(idx); handleHover(); }}
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
