@@ -1,0 +1,75 @@
+.notificationWrapper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.notification {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  pointer-events: auto;
+  border-left: 3px solid var(--accent-gold);
+}
+
+.icon {
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  font-family: var(--font-playfair);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.message {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+  .notificationWrapper {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+  .notification {
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+}

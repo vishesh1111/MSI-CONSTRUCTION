@@ -1,0 +1,56 @@
+import Image from "next/image";
+import styles from "./SectionFounders.module.css";
+import Reveal from "./Reveal";
+
+export default function SectionFounders() {
+  const founders = [
+    {
+      name: "MRITUNJAY",
+      role: "Visionary",
+      image: "/img/m.jpg"
+    },
+    {
+      name: "MOHD. TAUSIF",
+      role: "Visionary",
+      image: "/img/tuasif.jpg"
+    },
+    {
+      name: "SHUAIBH KHAN",
+      role: "Visionary",
+      image: "/img/shuaibh-khan-new.jpg"
+    }
+  ];
+
+  return (
+    <section className={styles.section} id="founders">
+      <div className={styles.container}>
+        <Reveal className={styles.header}>
+          <span className={styles.subtitle}>MINDSET</span>
+          <h2 className={styles.title}>The Visionaries</h2>
+          <p className={styles.desc}>
+            A collective of rogue thinkers and master craftsmen dedicated to redefining the built environment.
+          </p>
+        </Reveal>
+
+        <div className={styles.grid}>
+          {founders.map((founder, index) => (
+            <Reveal key={index} delay={index * 200} className={styles.card}>
+              <div className={styles.imageWrapper}>
+                <Image 
+                  src={founder.image} 
+                  alt={founder.name} 
+                  fill 
+                  className={styles.img} 
+                />
+              </div>
+              <div className={styles.info}>
+                <h3 className={styles.name}>{founder.name}</h3>
+                <p className={styles.role}>{founder.role}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

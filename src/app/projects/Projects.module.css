@@ -1,0 +1,97 @@
+.main {
+  background: var(--bg-primary);
+  min-height: 100vh;
+  padding-top: 120px; /* Space for navbar */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.main {
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.heroSection {
+  padding-top: 180px;
+  padding-bottom: 100px;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImg {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(17, 17, 17, 0.7) 0%, rgba(17, 17, 17, 0.4) 50%, var(--bg-primary) 100%);
+}
+
+.title {
+  font-size: 4.5rem;
+  font-family: var(--font-playfair);
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent-gold);
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Gallery Section wrapper */
+.gallerySection {
+  padding: 4rem 0 10rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .heroSection {
+    padding: 4rem 0 2rem 0;
+  }
+}

@@ -1,0 +1,150 @@
+.section {
+  padding: 0 0 8rem 0;
+  background: var(--bg-primary);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.studioBanner {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.studioContent {
+  max-width: 400px;
+}
+
+.studioSubtitle {
+  color: var(--accent-gold);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.studioTitle {
+  font-size: 2.5rem;
+  font-family: var(--font-playfair);
+  margin-bottom: 1rem;
+}
+
+.studioAddress {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.studioBtn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.studioBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.studioBtn span {
+  position: relative;
+  z-index: 1;
+}
+
+.studioBtn:hover::before {
+  transform: scaleY(1);
+}
+
+.studioBtn:hover {
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  margin-top: 2rem;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--accent-gold);
+  padding-bottom: 0.5rem;
+}
+
+.inputField {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  width: 250px;
+  outline: none;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.inputField::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+}
+
+.submitArrow {
+  background: transparent;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.submitArrow:hover {
+  transform: translateX(5px);
+}
+
+.successMessage {
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}

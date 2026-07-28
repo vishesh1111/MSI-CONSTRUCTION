@@ -1,0 +1,365 @@
+.hero {
+  padding-top: 150px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.titleArea {
+  z-index: 2;
+}
+
+.subtitle {
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-playfair);
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+  padding-left: 2rem;
+}
+
+.accent {
+  color: var(--accent-gold);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.navArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.largeBgText {
+  position: absolute;
+  top: -80px;
+  right: -50px;
+  font-family: var(--font-playfair);
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+.heroNav {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  z-index: 2;
+}
+
+.heroNav button {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-secondary);
+  padding: 0.75rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroNav button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.heroNav button span {
+  position: relative;
+  z-index: 1;
+}
+
+.heroNav button:hover::before, .heroNav button.active::before {
+  transform: scaleY(1);
+}
+
+.heroNav button:hover, .heroNav button.active {
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.grid {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 8rem;
+}
+
+.gridCol1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gridCol2 {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.imageWrapper1 {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.imageWrapper2 {
+  position: relative;
+  width: 80%;
+  height: 40vh;
+  margin-left: auto;
+  margin-top: -10vh;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.imageWrapper3 {
+  position: relative;
+  width: 90%;
+  height: 50vh;
+  margin-top: 20vh;
+  overflow: hidden;
+}
+
+.imageWrapper4 {
+  position: relative;
+  width: 70%;
+  height: 45vh;
+  margin-left: 30%;
+  margin-top: -15vh;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageWrapper1:hover .img,
+.imageWrapper2:hover .img,
+.imageWrapper3:hover .img,
+.imageWrapper4:hover .img {
+  transform: scale(1.05);
+}
+
+.ctaGroup {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border: 1px solid var(--accent-gold);
+  padding: 1.2rem 3rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  height: 55px;
+}
+
+.btnPrimary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.btnPrimary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnPrimary:hover {
+  background: transparent;
+  color: var(--accent-gold);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 3rem;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 55px;
+}
+
+.btnSecondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.btnSecondary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnSecondary:hover::before {
+  transform: scaleY(1);
+}
+
+.btnSecondary:hover {
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.stats {
+  text-align: center;
+  padding: 6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statsTitle {
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statNumber {
+  font-family: var(--font-playfair);
+  font-size: 3.5rem;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+  }
+  .gridCol2 {
+    padding-top: 0;
+  }
+  .imageWrapper4 {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .statsRow {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .heroNav {
+    flex-wrap: wrap;
+  }
+  .statsRow {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

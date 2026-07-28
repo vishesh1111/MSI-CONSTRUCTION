@@ -1,0 +1,135 @@
+:root {
+  /* Obsidian & Champagne Palette */
+  --bg-primary: #0A0A0A; /* Midnight Obsidian */
+  --bg-secondary: #131313; /* Surface */
+  --bg-surface: #1A1A1A; /* Subtle Grey */
+  --bg-light: #F8F8F8; /* Carrara White */
+  
+  --accent-gold: #D4AF37; /* Champagne Gold */
+  --accent-gold-light: #f2ca50; /* Primary */
+  --accent-gold-dark: #735c00;
+  
+  --text-primary: #e5e2e1;
+  --text-secondary: #bab8b7;
+  --text-dark: #0A0A0A;
+  
+  --border-color: rgba(212, 175, 55, 0.3); /* Champagne Gold 30% */
+  --glass-bg: rgba(10, 10, 10, 0.8);
+  
+  --font-sans: var(--font-sans), sans-serif;
+  --font-playfair: var(--font-playfair), serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* removed max-width: 100vw */
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-gold);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utility classes */
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-widest {
+  letter-spacing: 0.2em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+.reveal-base {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Base Responsive Typography */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 14px;
+  }
+}

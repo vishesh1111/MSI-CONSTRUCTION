@@ -1,0 +1,259 @@
+.section {
+  padding: 8rem 0;
+  background: var(--bg-primary);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.headerSplit {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 8rem;
+  align-items: center;
+}
+
+.headerText {
+  flex: 1;
+}
+
+.headerImage {
+  flex: 1.2;
+}
+
+.subtitle {
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent-gold);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.collection {
+  display: flex;
+  gap: 6rem;
+  margin-bottom: 8rem;
+  align-items: center;
+}
+
+.collectionReverse {
+  flex-direction: row-reverse;
+}
+
+.collImageWrapper {
+  flex: 1.2;
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.collText {
+  flex: 1;
+}
+
+.collTitle {
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.collDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 450px;
+}
+
+.featureList {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.featureList li {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featureList li::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background-color: var(--accent-gold);
+}
+
+.exploreBtn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.exploreBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.exploreBtn span {
+  position: relative;
+  z-index: 1;
+}
+
+.exploreBtn:hover::before {
+  transform: scaleY(1);
+}
+
+.exploreBtn:hover {
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.solidBtn {
+  display: inline-block;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border: 1px solid var(--accent-gold);
+  padding: 1rem 3rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.solidBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.solidBtn span {
+  position: relative;
+  z-index: 1;
+}
+
+.solidBtn:hover {
+  background: transparent;
+  color: var(--accent-gold);
+}
+
+.quote {
+  border-left: 2px solid var(--accent-gold);
+  padding-left: 1.5rem;
+  font-family: var(--font-playfair);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.compositeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.splitImages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.imgHalf, .imgHalf2 {
+  flex: 1;
+  position: relative;
+}
+
+.imgHalf2 {
+  margin-top: 2rem;
+}
+
+.tinySub {
+  color: var(--accent-gold);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .headerSplit, .collection, .collectionReverse {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}

@@ -1,0 +1,342 @@
+.section {
+  padding: 8rem 0;
+  background: var(--bg-primary);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-gold);
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 auto 10rem auto;
+  max-width: 900px;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.grid::before {
+  content: '';
+  position: absolute;
+  left: 7rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step:hover {
+  transform: translateX(15px);
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  left: 7rem;
+  top: 1.25rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--accent-gold);
+  transform: translateX(-50%);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.step:hover::before {
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.stepNum {
+  font-family: var(--font-playfair);
+  font-size: 3.5rem;
+  color: rgba(197, 160, 89, 0.3);
+  line-height: 0.8;
+  width: 5rem;
+  text-align: right;
+  flex-shrink: 0;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step:hover .stepNum {
+  color: var(--accent-gold);
+}
+
+.stepContent {
+  flex: 1;
+  padding-top: 0;
+}
+
+.stepTitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  transition: letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step:hover .stepTitle {
+  letter-spacing: 0.25em;
+  color: var(--accent-gold);
+}
+
+.stepDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  transition: color 0.4s ease;
+}
+
+.step:hover .stepDesc {
+  color: var(--text-primary);
+}
+
+.ctaBanner {
+  background: var(--bg-secondary);
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.ctaDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border: 1px solid var(--accent-gold);
+  padding: 1rem 3rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  height: 52px;
+}
+
+.btnPrimary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.btnPrimary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnPrimary:hover {
+  background: transparent;
+  color: var(--accent-gold);
+}
+
+.contactDropdownWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.contactDropdownCard {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+/* Invisible bridge to maintain hover state over the gap */
+.contactDropdownCard::before {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+}
+
+.contactDropdownWrapper:hover .contactDropdownCard {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.contactDropdownCard a {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contactDropdownCard a:hover {
+  color: var(--accent-gold);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 52px;
+}
+
+.btnSecondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+
+.btnSecondary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnSecondary:hover::before {
+  transform: scaleY(1);
+}
+
+.btnSecondary:hover {
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+}
+
+.compassIcon {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20rem;
+  color: rgba(255, 255, 255, 0.02);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .ctaBanner {
+    padding: 3rem 2rem;
+  }
+  .actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,98 @@
+import fs from "fs/promises";
+import path from "path";
+import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
+import SectionContact from "@/components/SectionContact";
+import ProjectsGallery, { ProjectImage } from "@/components/ProjectsGallery";
+import styles from "./Projects.module.css";
+
+// Helper to recursively get all files in a directory
+async function getFiles(dir: string): Promise<string[]> {
+  const dirents = await fs.readdir(dir, { withFileTypes: true });
+  const files = await Promise.all(
+    dirents.map((dirent) => {
+      const res = path.resolve(dir, dirent.name);
+      return dirent.isDirectory() ? getFiles(res) : res;
+    })
+  );
+  return Array.prototype.concat(...files);
+}
+
+export default async function ProjectsPage() {
+  const publicDir = path.join(process.cwd(), "public");
+  const gptDir = path.join(publicDir, "GPT");
+  
+  let projects: ProjectImage[] = [];
+
+  try {
+    const allFiles = await getFiles(gptDir);
+    
+    projects = allFiles
+      .filter((file) => !file.includes(".DS_Store"))
+      .map((file) => {
+        // file path looks like: /.../public/GPT/Residential/Bedroom/image.png
+        const relativePath = file.replace(publicDir, "");
+        // path parts: ["", "GPT", "Residential", "Bedroom", "image.png"]
+        const parts = relativePath.split(path.sep);
+        
+        const category = parts[2] || "Others";
+        // If there's a subcategory (e.g., Bedroom)
+        const subcategory = parts.length > 4 ? parts[3] : undefined;
+        const filename = parts[parts.length - 1].replace(".png", "").replace(".jpg", "");
+
+        return {
+          src: relativePath.replace(/\\/g, "/"), // Ensure web-safe slashes
+          category,
+          subcategory,
+          filename
+        };
+      });
+  } catch (error) {
+    console.error("Error reading GPT directory:", error);
+  }
+
+  // Use the specific office interior image requested by the user, or fallback
+  const targetImage = "/GPT/Commercial/ChatGPT Image Jul 28, 2026, 07_29_21 AM.png";
+  const bgImage = projects.find((p) => p.src === targetImage)?.src || projects.find((p) => p.category === "Commercial")?.src || "/img/exterior.jpg";
+
+  return (
+    <>
+      <Navbar />
+      <main className={styles.main}>
+        <section className={styles.heroSection}>
+          <div className={styles.heroBackground}>
+            <Image
+              src={bgImage}
+              alt="Background"
+              fill
+              className={styles.heroImg}
+              priority
+            />
+            <div className={styles.heroOverlay}></div>
+          </div>
+
+          <div className={styles.container}>
+            <Reveal>
+              <span className={styles.subtitle}>PORTFOLIO OF EXCELLENCE</span>
+              <h1 className={styles.title}>
+                Our Interior Design<br />
+                Projects
+              </h1>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className={styles.gallerySection}>
+          <div className={styles.container}>
+            <ProjectsGallery projects={projects} />
+          </div>
+        </section>
+
+        <SectionContact />
+      </main>
+      <Footer />
+    </>
+  );
+}
