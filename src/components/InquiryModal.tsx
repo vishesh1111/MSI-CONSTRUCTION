@@ -1,9 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import styles from "./InquiryModal.module.css";
+
+const showcaseImages = [
+  "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png",
+  "/GPT/Commercial/ChatGPT Image Jul 28, 2026, 07_29_21 AM.png",
+  "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png",
+  "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png",
+  "/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png"
+];
 
 interface InquiryModalProps {
   isOpen: boolean;
@@ -21,6 +29,15 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % showcaseImages.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,15 +97,25 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
 
                 <div className={styles.refImageWrapper}>
                   <div className={styles.imageBox}>
-                    <Image 
-                      src="/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png" 
-                      alt="Reference Architecture" 
-                      fill 
-                      className={styles.refImg} 
-                      sizes="300px"
-                    />
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentImageIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1.2 }}
+                        style={{ position: "absolute", width: "100%", height: "100%" }}
+                      >
+                        <Image 
+                          src={showcaseImages[currentImageIndex]} 
+                          alt="Reference Architecture" 
+                          fill 
+                          className={styles.refImg} 
+                          sizes="300px"
+                        />
+                      </motion.div>
+                    </AnimatePresence>
                   </div>
-                  <p className={styles.refCaption}>REF NO: MSI-7721-ARC</p>
                 </div>
               </div>
 
