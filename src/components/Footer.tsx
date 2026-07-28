@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottomBar}>
-          <p>© 2024 MSI CONSTRUCTION.</p>
+          <p>© 2026 MSI CONSTRUCTION.</p>
           <p>ARCHITECTURAL PRECISION - LUXURY MASTERY</p>
         </div>
       </Reveal>

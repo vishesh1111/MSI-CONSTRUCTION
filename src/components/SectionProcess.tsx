@@ -49,7 +49,7 @@ export default function SectionProcess() {
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>READY TO DEFINE YOUR SPACE?</h2>
             <p className={styles.ctaDesc}>
-              We are currently accepting inquiries for late 2024 projects. Join our waitlist for a private design consultation.
+              We are currently accepting inquiries for late 2026 projects. Join our waitlist for a private design consultation.
             </p>
             <div className={styles.actions}>
               <div className={styles.contactDropdownWrapper}>
