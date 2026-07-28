@@ -25,10 +25,12 @@ export default function Footer() {
           <div className={styles.linksBlock}>
             <h4 className={styles.blockTitle}>QUICK LINKS</h4>
             <div className={styles.linksList}>
+              <Link href="/">HOME</Link>
+              <Link href="/about">ABOUT</Link>
+              <Link href="/services">SERVICES</Link>
+              <Link href="/projects">PROJECTS</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
-              <Link href="#">ARCHITECTURE</Link>
-              <Link href="#">INTERIOR DESIGN</Link>
-              <Link href="#">PRESS</Link>
+              <Link href="/contact">CONTACT</Link>
             </div>
           </div>
 
@@ -49,7 +51,7 @@ export default function Footer() {
 
         <div className={styles.bottomBar}>
           <p>© 2026 MSI CONSTRUCTION.</p>
-          <p>ARCHITECTURAL PRECISION - LUXURY MASTERY</p>
+          <p>ARCHITECTURAL PRECISION - LUXURY INTERIOR</p>
         </div>
       </Reveal>
     </footer>
