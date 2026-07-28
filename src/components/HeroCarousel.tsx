@@ -166,7 +166,6 @@ export default function HeroCarousel() {
     <Reveal className={styles.carouselContainer} delay={200}>
       <div 
         className={`${styles.carouselWrapper} ${isPaused ? styles.isPaused : ''}`}
-        onMouseEnter={handleHover}
         onTouchStart={handleHover}
       >
         <AnimatePresence initial={false} custom={direction}>
