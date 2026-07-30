@@ -59,7 +59,7 @@ export default async function VideosPage() {
                         src={video} 
                         className={styles.videoPlayer} 
                         controls 
-                        controlsList="nodownload"
+                        controlsList="nodownload nofullscreen"
                         preload="metadata"
                       />
                     </div>
