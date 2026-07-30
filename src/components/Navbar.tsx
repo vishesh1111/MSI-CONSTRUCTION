@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className={styles.container}>
             <Link href="/" className={styles.logo}>
               <Image 
-                src="/img/LOGO33_trimmed.png" 
+                src="/img/MSI_cropped.png" 
                 alt="MSI Construction" 
                 width={160} 
                 height={60} 
