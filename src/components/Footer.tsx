@@ -40,7 +40,6 @@ export default function Footer() {
               <div className={styles.contactDropdownWrapper}>
                 <span className={styles.contactDropdownTrigger}>Phone Numbers ▾</span>
                 <div className={styles.contactDropdownCard}>
-                  <a href="tel:+919810040889" style={{textTransform: 'none'}}>+91 98100 40889</a>
                   <a href="tel:+919319444747" style={{textTransform: 'none'}}>+91 93194 44747</a>
                 </div>
               </div>

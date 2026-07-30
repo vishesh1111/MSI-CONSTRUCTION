@@ -90,10 +90,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   Our collaborative approach is highly exclusive. We accept a limited number of commissions annually to ensure absolute architectural integrity.
                 </p>
                 
-                <div className={styles.contactInfo}>
-                  <p>DIRECT LINE</p>
-                  <a href="tel:+919810040889">+91 98100 40889</a>
-                </div>
+
 
                 <div className={styles.refImageWrapper}>
                   <div className={styles.imageBox}>

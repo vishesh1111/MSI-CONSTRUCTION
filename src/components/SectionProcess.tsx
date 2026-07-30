@@ -55,7 +55,6 @@ export default function SectionProcess() {
               <div className={styles.contactDropdownWrapper}>
                 <a href="#contact" className={styles.btnPrimary}><span>BOOK A CONSULTATION</span></a>
                 <div className={styles.contactDropdownCard}>
-                  <a href="tel:+919810040889" style={{textTransform: 'none'}}>+91 98100 40889</a>
                   <a href="tel:+919319444747" style={{textTransform: 'none'}}>+91 93194 44747</a>
                 </div>
               </div>

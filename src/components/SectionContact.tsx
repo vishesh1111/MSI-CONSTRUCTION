@@ -15,7 +15,6 @@ export default function SectionContact() {
               Our collaborative approach is highly exclusive. We accept a limited number of commissions annually to ensure absolute architectural integrity.
             </p>
             <div className={styles.formContactInfo}>
-              <a href="tel:+919810040889" className={styles.formPhone}>+91 98100 40889</a>
               <a href="tel:+919319444747" className={styles.formPhone}>+91 93194 44747</a>
               <div className={styles.formSocials}>
                 <a href="https://www.instagram.com/msiconstruction.in?igsh=ZTkwOHFtNnZqaHJp" target="_blank" rel="noopener noreferrer">
