@@ -1,7 +1,64 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./SectionContact.module.css";
 import Reveal from "./Reveal";
 
 export default function SectionContact() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    projectType: "",
+    location: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "contact_form",
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          location: formData.location,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to submit inquiry");
+      }
+
+      setIsSubmitted(true);
+      setFormData({ fullName: "", email: "", phone: "", projectType: "", location: "", message: "" });
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className={styles.section} id="contact">
       <div className={styles.container}>
@@ -27,24 +84,92 @@ export default function SectionContact() {
             </div>
           </div>
           <div className={styles.transForm}>
-            <input type="text" placeholder="FULL NAME" className={styles.input} />
-            <input type="email" placeholder="EMAIL ADDRESS" className={styles.input} />
-            <input type="tel" placeholder="PHONE NUMBER" className={styles.input} />
-            <div className={styles.selectWrapper}>
-              <select className={`${styles.input} ${styles.select}`} defaultValue="">
-                <option value="" disabled>PROJECT TYPE</option>
-                <option value="residential">RESIDENTIAL</option>
-                <option value="commercial">COMMERCIAL</option>
-                <option value="hospitality">HOSPITALITY</option>
-                <option value="retail">RETAIL</option>
-                <option value="workplace">WORKPLACE</option>
-                <option value="mixed-use">MIXED-USE</option>
-                <option value="others">OTHERS</option>
-              </select>
-            </div>
-            <input type="text" placeholder="PROJECT LOCATION" className={styles.input} />
-            <textarea placeholder="WHERE DO WE BEGIN?" className={`${styles.input} ${styles.textarea}`}></textarea>
-            <button className={styles.submitBtn}><span>SUBMIT INQUIRY</span></button>
+            {!isSubmitted ? (
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="FULL NAME"
+                  className={styles.input}
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="EMAIL ADDRESS"
+                  className={styles.input}
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="PHONE NUMBER"
+                  className={styles.input}
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                <div className={styles.selectWrapper}>
+                  <select
+                    name="projectType"
+                    className={`${styles.input} ${styles.select}`}
+                    value={formData.projectType}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled>PROJECT TYPE</option>
+                    <option value="residential">RESIDENTIAL</option>
+                    <option value="commercial">COMMERCIAL</option>
+                    <option value="hospitality">HOSPITALITY</option>
+                    <option value="retail">RETAIL</option>
+                    <option value="workplace">WORKPLACE</option>
+                    <option value="mixed-use">MIXED-USE</option>
+                    <option value="others">OTHERS</option>
+                  </select>
+                </div>
+                <input
+                  type="text"
+                  name="location"
+                  placeholder="PROJECT LOCATION"
+                  className={styles.input}
+                  value={formData.location}
+                  onChange={handleChange}
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="WHERE DO WE BEGIN?"
+                  className={`${styles.input} ${styles.textarea}`}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+                {submitError && (
+                  <p className={styles.errorMsg}>{submitError}</p>
+                )}
+                <button className={styles.submitBtn} type="submit" disabled={isSubmitting}>
+                  <span>{isSubmitting ? "SUBMITTING..." : "SUBMIT INQUIRY"}</span>
+                </button>
+              </form>
+            ) : (
+              <div className={styles.successState}>
+                <h3 className={styles.successTitle}>INQUIRY RECEIVED</h3>
+                <p className={styles.successDesc}>
+                  Your submission has been logged. Our principal architect will review your brief, and a representative will contact you within 24 hours.
+                </p>
+                <button
+                  className={styles.submitBtn}
+                  onClick={() => setIsSubmitted(false)}
+                  style={{ marginTop: "1.5rem" }}
+                >
+                  <span>SUBMIT ANOTHER</span>
+                </button>
+              </div>
+            )}
           </div>
         </Reveal>
       </div>

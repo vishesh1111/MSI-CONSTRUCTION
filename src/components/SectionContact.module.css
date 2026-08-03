@@ -177,6 +177,40 @@
   color: var(--accent-gold);
 }
 
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMsg {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin-top: -1rem;
+}
+
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.successTitle {
+  font-size: 2rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.successDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 450px;
+}
+
 @media (max-width: 1024px) {
   .transformation {
     gap: 4rem;

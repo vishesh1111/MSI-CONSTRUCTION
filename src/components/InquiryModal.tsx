@@ -29,6 +29,8 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -39,15 +41,42 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
     return () => clearInterval(interval);
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // In a real app, send data to backend here
-    setTimeout(() => {
-      onClose();
-      setIsSubmitted(false);
-      setFormData({ fullName: "", email: "", phone: "", typology: "", location: "", vision: "" });
-    }, 3000);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "inquiry_modal",
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.typology,
+          location: formData.location,
+          message: formData.vision,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to submit inquiry");
+      }
+
+      setIsSubmitted(true);
+      setTimeout(() => {
+        onClose();
+        setIsSubmitted(false);
+        setFormData({ fullName: "", email: "", phone: "", typology: "", location: "", vision: "" });
+      }, 3000);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -209,8 +238,14 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                       />
                     </div>
 
-                    <button type="submit" className={styles.submitBtn}>
-                      <span>SUBMIT INQUIRY</span>
+                    {submitError && (
+                      <p style={{ color: '#ff6b6b', fontSize: '0.85rem', marginBottom: '0.5rem', letterSpacing: '0.05em' }}>
+                        {submitError}
+                      </p>
+                    )}
+
+                    <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                      <span>{isSubmitting ? "SUBMITTING..." : "SUBMIT INQUIRY"}</span>
                     </button>
                   </form>
                 ) : (
