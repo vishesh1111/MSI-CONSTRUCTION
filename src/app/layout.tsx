@@ -67,7 +67,12 @@ export const metadata: Metadata = {
       'max-snippet': -1
     }
   },
-  alternates: { canonical: 'https://www.msiconstruction.in' }
+  alternates: { 
+    canonical: 'https://www.msiconstruction.in',
+    types: {
+      'application/rss+xml': 'https://www.msiconstruction.in/feed.xml'
+    }
+  }
 };
 
 export default function RootLayout({
