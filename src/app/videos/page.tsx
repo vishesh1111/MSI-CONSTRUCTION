@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import fs from "fs/promises";
 import path from "path";
 import Navbar from "@/components/Navbar";
@@ -21,6 +22,17 @@ async function getVideoFiles(dir: string): Promise<string[]> {
     return [];
   }
 }
+
+export const metadata: Metadata = {
+  title: 'Construction & Interior Design Project Videos',
+  description: 'Watch MSI Construction\'s project videos showcasing our residential, commercial, and interior design work across Delhi NCR. See our construction quality and craftsmanship in action.',
+  alternates: { canonical: 'https://msiconstruction.in/videos' },
+  openGraph: {
+    title: 'Project Videos | MSI Construction',
+    description: 'Watch our construction and interior design projects come to life.',
+    url: 'https://msiconstruction.in/videos',
+  },
+};
 
 export default async function VideosPage() {
   const publicDir = path.join(process.cwd(), "public");

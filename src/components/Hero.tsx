@@ -12,13 +12,13 @@ export default function Hero() {
         <Reveal className={styles.header}>
           <div className={styles.titleArea}>
             <h1 className={styles.title}>
-              Awesome Interior<br />
-              <span className={styles.accent}>Designing & Construction Services</span><br />
-              For Your Home
+              Best Construction Company<br />
+              <span className={styles.accent}>& Interior Designer</span><br />
+              in Delhi NCR
             </h1>
             <p className={styles.description}>
-              A curated selection of architectural milestones, defined<br />
-              by structural integrity and the silent poetry of space.
+              30+ years of delivering residential, commercial & industrial<br />
+              construction and luxury interior design across India.
             </p>
           </div>
           <div className={styles.navArea}>
@@ -43,7 +43,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal className={styles.stats} delay={400}>
-          <h3 className={styles.statsTitle}>THE PURSUIT OF PRECISION</h3>
+          <h3 className={styles.statsTitle}>TRUSTED ACROSS INDIA</h3>
           <div className={styles.statsRow}>
             <div className={styles.statItem}>
               <AnimatedCounter to={42} className={styles.statNumber} />

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import fs from "fs/promises";
 import path from "path";
 import Image from "next/image";
@@ -19,6 +20,17 @@ async function getFiles(dir: string): Promise<string[]> {
   );
   return Array.prototype.concat(...files);
 }
+
+export const metadata: Metadata = {
+  title: 'Our Construction & Interior Design Projects — Portfolio',
+  description: 'View MSI Construction\'s portfolio of completed residential, commercial, and interior design projects across Delhi NCR and India. See our work in luxury homes, offices, hotels, and more.',
+  alternates: { canonical: 'https://msiconstruction.in/projects' },
+  openGraph: {
+    title: 'Project Portfolio | MSI Construction',
+    description: 'Browse 1000+ completed construction and interior design projects across Delhi, Noida, Gurgaon & India.',
+    url: 'https://msiconstruction.in/projects',
+  },
+};
 
 export default async function ProjectsPage() {
   const publicDir = path.join(process.cwd(), "public");
@@ -55,7 +67,7 @@ export default async function ProjectsPage() {
 
   // Use the specific office interior image requested by the user, or fallback
   const targetImage = "/GPT/Commercial/ChatGPT Image Jul 28, 2026, 07_29_21 AM.png";
-  const bgImage = projects.find((p) => p.src === targetImage)?.src || projects.find((p) => p.category === "Commercial")?.src || "/img/exterior.jpg";
+  const bgImage = projects.find((p) => p.src === targetImage)?.src || projects.find((p) => p.category === "Commercial")?.src || "/img/residential-exterior-construction.jpg";
 
   return (
     <>
@@ -77,8 +89,8 @@ export default async function ProjectsPage() {
             <Reveal>
               <span className={styles.subtitle}>PORTFOLIO OF EXCELLENCE</span>
               <h1 className={styles.title}>
-                Our Interior Design<br />
-                Projects
+                Our Construction &<br />
+                Interior Design Projects
               </h1>
             </Reveal>
           </div>

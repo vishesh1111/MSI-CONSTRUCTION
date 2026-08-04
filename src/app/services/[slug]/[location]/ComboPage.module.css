@@ -1,0 +1,195 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.breadcrumb {
+  padding: 2rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.breadcrumb a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #fff;
+}
+
+.breadcrumb span {
+  margin: 0 0.5rem;
+}
+
+.hero {
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-family: var(--font-playfair);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+@media (min-width: 992px) {
+  .contentWrapper {
+    grid-template-columns: 65% 1fr;
+    gap: 4rem;
+  }
+}
+
+.mainContent {
+  color: var(--text-secondary);
+}
+
+.mainContent h2 {
+  font-family: var(--font-playfair);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 2.5rem 0 1.5rem;
+}
+
+.mainContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-family: var(--font-sans);
+}
+
+.mainContent ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.mainContent li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.mainContent li::before {
+  content: '•';
+  color: var(--accent-gold);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: fit-content;
+}
+
+.sidebar h3 {
+  font-family: var(--font-playfair);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.sidebarList li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebarList a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: var(--font-sans);
+  display: block;
+}
+
+.sidebarList a:hover {
+  color: var(--accent-gold);
+}
+
+.faqSection {
+  padding: 4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faqItem {
+  margin-bottom: 2rem;
+}
+
+.faqItem h3 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.faqItem p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  margin-top: 4rem;
+}
+
+.ctaTitle {
+  font-family: var(--font-playfair);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.ctaText {
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-size: 1.125rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #fff;
+}

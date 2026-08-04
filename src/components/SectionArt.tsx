@@ -9,7 +9,7 @@ export default function SectionArt() {
       <div className={styles.container}>
         <Reveal className={styles.heroBanner}>
           <div className={styles.bgImage}>
-            <Image src="/img/kitchen.jpg" alt="Art of Precision" fill className={styles.img} />
+            <Image src="/img/modular-kitchen-interior-design.jpg" alt="Art of Precision" fill className={styles.img} />
             <div className={styles.overlay}></div>
           </div>
           <div className={styles.bannerContent}>
@@ -57,7 +57,7 @@ export default function SectionArt() {
           </div>
           <div className={styles.imageContent}>
             <div className={styles.imageWrapper}>
-              <Image src="/img/exterior.jpg" alt="Refining" fill className={styles.img} />
+              <Image src="/img/residential-exterior-construction.jpg" alt="Refining" fill className={styles.img} />
             </div>
           </div>
         </Reveal>

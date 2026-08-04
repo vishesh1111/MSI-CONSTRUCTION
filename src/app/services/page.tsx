@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -5,6 +6,17 @@ import SectionCraftsmanship from "@/components/SectionCraftsmanship";
 import SectionProcess from "@/components/SectionProcess";
 import SectionStudio from "@/components/SectionStudio";
 import styles from "./Services.module.css";
+
+export const metadata: Metadata = {
+  title: 'Construction & Interior Design Services in Delhi NCR',
+  description: 'Explore MSI Construction\'s services: residential construction, commercial construction, industrial building, hotel & hospitality construction, interior design, turnkey projects, and specialized property construction across Delhi NCR and India.',
+  alternates: { canonical: 'https://msiconstruction.in/services' },
+  openGraph: {
+    title: 'Construction & Interior Design Services | MSI Construction',
+    description: 'Full-service construction and interior design company in Delhi NCR. Residential, commercial, industrial, hospitality & turnkey projects.',
+    url: 'https://msiconstruction.in/services',
+  },
+};
 
 export default function ServicesPage() {
   const services = [

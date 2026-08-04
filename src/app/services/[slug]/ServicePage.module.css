@@ -1,0 +1,255 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero {
+  padding: 10rem 0 4rem;
+  text-align: center;
+  background-color: var(--bg-primary, #111);
+  color: var(--text-primary, #fff);
+}
+
+.hero h1 {
+  font-family: var(--font-playfair, serif);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-gold, #d4af37);
+}
+
+.hero p {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-secondary, #ccc);
+}
+
+.breadcrumb {
+  padding: 1rem 0;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.9rem;
+  color: var(--text-secondary, #ccc);
+}
+
+.breadcrumb a {
+  color: var(--accent-gold, #d4af37);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 0;
+  background-color: var(--bg-primary, #111);
+  color: var(--text-primary, #fff);
+}
+
+@media (min-width: 768px) {
+  .layout {
+    flex-direction: row;
+  }
+}
+
+.mainContent {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  .mainContent {
+    flex: 0 0 65%;
+  }
+}
+
+.sidebar {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    flex: 0 0 30%;
+  }
+}
+
+.content h2 {
+  font-family: var(--font-playfair, serif);
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: var(--accent-gold, #d4af37);
+}
+
+.content p {
+  font-family: var(--font-sans, sans-serif);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary, #ccc);
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.features li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-sans, sans-serif);
+  color: var(--text-primary, #fff);
+}
+
+.features li::before {
+  content: "•";
+  color: var(--accent-gold, #d4af37);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.faqSection {
+  margin-top: 4rem;
+}
+
+.faqSection h2 {
+  font-family: var(--font-playfair, serif);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-gold, #d4af37);
+}
+
+.faq {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.faq summary {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  cursor: pointer;
+  color: var(--text-primary, #fff);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  color: var(--accent-gold, #d4af37);
+  font-size: 1.5rem;
+}
+
+.faq[open] summary::after {
+  content: "-";
+}
+
+.faq p {
+  padding: 0 0 1rem 0;
+  font-family: var(--font-sans, sans-serif);
+  color: var(--text-secondary, #ccc);
+  line-height: 1.6;
+}
+
+.sidebarCard {
+  background-color: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+.sidebarCard h3 {
+  font-family: var(--font-playfair, serif);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-gold, #d4af37);
+}
+
+.relatedList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.relatedList li {
+  margin-bottom: 1rem;
+}
+
+.relatedList a {
+  color: var(--text-primary, #fff);
+  text-decoration: none;
+  font-family: var(--font-sans, sans-serif);
+  transition: color 0.3s ease;
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.relatedList a:hover {
+  color: var(--accent-gold, #d4af37);
+}
+
+.cta {
+  margin-top: 4rem;
+  padding: 4rem 2rem;
+  background-color: rgba(212,175,55,0.1);
+  border: 1px solid var(--accent-gold, #d4af37);
+  text-align: center;
+  border-radius: 8px;
+}
+
+.cta h2 {
+  font-family: var(--font-playfair, serif);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-gold, #d4af37);
+}
+
+.cta p {
+  font-family: var(--font-sans, sans-serif);
+  color: var(--text-primary, #fff);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: var(--accent-gold, #d4af37);
+  color: #000;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-family: var(--font-sans, sans-serif);
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: #b3922c;
+}
+
+.serviceImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+.bgPrimary {
+  background-color: var(--bg-primary, #111);
+}

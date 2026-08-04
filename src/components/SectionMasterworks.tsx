@@ -21,14 +21,14 @@ export default function SectionMasterworks() {
           </div>
           <div className={styles.headerImage}>
             <div className={styles.imageWrapper}>
-              <Image src="/img/kitchen.jpg" alt="Curated Masterworks" fill className={styles.img} />
+              <Image src="/img/modular-kitchen-interior-design.jpg" alt="Curated Masterworks" fill className={styles.img} />
             </div>
           </div>
         </Reveal>
 
         <Reveal className={styles.collection} delay={200}>
           <div className={styles.collImageWrapper}>
-            <Image src="/img/kitchen.jpg" alt="Kitchen Collection" fill className={styles.img} />
+            <Image src="/img/modular-kitchen-interior-design.jpg" alt="Kitchen Collection" fill className={styles.img} />
           </div>
           <div className={styles.collText}>
             <h3 className={styles.collTitle}>THE KITCHEN<br />COLLECTION</h3>
@@ -49,7 +49,7 @@ export default function SectionMasterworks() {
         <Reveal className={`${styles.collection} ${styles.collectionReverse}`} delay={200}>
           <div className={styles.collImageWrapper}>
             <div className={styles.compositeImage}>
-               <Image src="/img/bathroom.jpg" alt="Sanctuary Collection" fill className={styles.img} />
+               <Image src="/img/luxury-bathroom-interior-design.jpg" alt="Sanctuary Collection" fill className={styles.img} />
             </div>
           </div>
           <div className={styles.collText}>
@@ -69,10 +69,10 @@ export default function SectionMasterworks() {
           <div className={styles.collImageWrapper}>
             <div className={styles.splitImages}>
               <div className={styles.imgHalf}>
-                 <Image src="/img/exterior.jpg" alt="Commercial Grandeur" fill className={styles.img} />
+                 <Image src="/img/residential-exterior-construction.jpg" alt="Commercial Grandeur" fill className={styles.img} />
               </div>
               <div className={styles.imgHalf2}>
-                 <Image src="/img/home-office.jpg" alt="Commercial Grandeur" fill className={styles.img} />
+                 <Image src="/img/home-office-interior-design.jpg" alt="Commercial Grandeur" fill className={styles.img} />
               </div>
             </div>
           </div>

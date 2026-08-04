@@ -1,8 +1,20 @@
+import type { Metadata } from 'next';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import SectionFounders from "@/components/SectionFounders";
 import styles from "./About.module.css";
+
+export const metadata: Metadata = {
+  title: 'About MSI Construction — 30+ Years of Construction Excellence in India',
+  description: 'Learn about MSI Construction, a trusted construction company and interior design firm led by Mr. Tausif. 30+ years of experience delivering projects for JW Marriott, Taj Vivanta & ITC Grand Chola across Delhi NCR and India.',
+  alternates: { canonical: 'https://msiconstruction.in/about' },
+  openGraph: {
+    title: 'About MSI Construction — 30+ Years of Construction Excellence',
+    description: 'Trusted by JW Marriott, Taj Vivanta & ITC Grand Chola. Premier construction & interior execution company in Delhi NCR.',
+    url: 'https://msiconstruction.in/about',
+  },
+};
 
 export default function AboutPage() {
 

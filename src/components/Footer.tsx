@@ -28,28 +28,43 @@ export default function Footer() {
               <Link href="/">HOME</Link>
               <Link href="/about">ABOUT</Link>
               <Link href="/services">SERVICES</Link>
-              <Link href="/projects?filter=RESIDENTIAL">PROJECTS</Link>
+              <Link href="/projects">PROJECTS</Link>
+              <Link href="/blog">BLOG</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
               <Link href="/contact">CONTACT</Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 className={styles.blockTitle}>OUR SERVICES</h4>
+            <div className={styles.linksList}>
+              <Link href="/services/residential-construction">Residential Construction</Link>
+              <Link href="/services/commercial-construction">Commercial Construction</Link>
+              <Link href="/services/interior-design">Interior Design</Link>
+              <Link href="/services/turnkey-projects">Turnkey Projects</Link>
+              <Link href="/services/renovation-and-remodeling">Renovation &amp; Remodeling</Link>
+              <Link href="/services/industrial-construction">Industrial Construction</Link>
             </div>
           </div>
 
           <div className={styles.subscribeBlock}>
             <h4 className={styles.blockTitle}>CONTACT</h4>
             <div className={styles.linksList}>
+              <span style={{fontSize: '0.85rem', lineHeight: '1.6', opacity: 0.8}}>Plot No -210, Gali No-05, Golden Ranaji Enclave, Nangli Dairy, New Delhi-110043</span>
               <div className={styles.contactDropdownWrapper}>
                 <span className={styles.contactDropdownTrigger}>Phone Numbers ▾</span>
                 <div className={styles.contactDropdownCard}>
                   <a href="tel:+919319444747" style={{textTransform: 'none'}}>+91 93194 44747</a>
                 </div>
               </div>
-              <a href="mailto:mohdtaushif@gmail.com" style={{textTransform: 'none'}}>E-mail : mohdtaushif@gmail.com</a>
+              <a href="mailto:info@msiconstruction.in" style={{textTransform: 'none'}}>info@msiconstruction.in</a>
+              <span style={{fontSize: '0.85rem', lineHeight: '1.6', opacity: 0.8, letterSpacing: '0.05em'}}>GSTIN: 06AFZPT0180Q1ZF</span>
             </div>
           </div>
         </div>
 
         <div className={styles.bottomBar}>
-          <p>© 2026 MSI CONSTRUCTION.</p>
+          <p>© 2026 MSI CONSTRUCTION. | GSTIN: 06AFZPT0180Q1ZF</p>
           <p>ARCHITECTURAL PRECISION - LUXURY INTERIOR</p>
         </div>
       </Reveal>

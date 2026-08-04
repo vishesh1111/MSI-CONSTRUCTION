@@ -20,7 +20,7 @@ export default function SectionAtmosphere() {
         <div className={styles.grid}>
           <Reveal delay={100} className={styles.card}>
             <div className={styles.imageWrapper}>
-              <Image src="/img/exterior.jpg" alt="The Monolith" fill className={styles.img} />
+              <Image src="/img/residential-exterior-construction.jpg" alt="The Monolith" fill className={styles.img} />
             </div>
             <div className={styles.cardInfo}>
               <h3 className={styles.cardTitle}>THE MONOLITH</h3>
@@ -31,7 +31,7 @@ export default function SectionAtmosphere() {
           
           <Reveal delay={200} className={`${styles.card} ${styles.cardOffset}`}>
             <div className={styles.imageWrapper}>
-              <Image src="/img/bathroom.jpg" alt="Vessel House" fill className={styles.img} />
+              <Image src="/img/luxury-bathroom-interior-design.jpg" alt="Vessel House" fill className={styles.img} />
             </div>
             <div className={styles.cardInfo}>
               <h3 className={styles.cardTitle}>VESSEL HOUSE</h3>
@@ -42,7 +42,7 @@ export default function SectionAtmosphere() {
 
           <Reveal delay={300} className={styles.card}>
             <div className={styles.imageWrapper}>
-              <Image src="/img/home-office.jpg" alt="Ochre Sands" fill className={styles.img} />
+              <Image src="/img/home-office-interior-design.jpg" alt="Ochre Sands" fill className={styles.img} />
             </div>
             <div className={styles.cardInfo}>
               <h3 className={styles.cardTitle}>OCHRE SANDS</h3>

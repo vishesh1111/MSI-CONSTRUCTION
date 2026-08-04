@@ -8,75 +8,87 @@ import Reveal from "./Reveal";
 
 const showcaseImages = [
   { 
-    src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png", 
+    src: "/GPT/Residential/Living Room/luxury-courtyard-interior-design.png",
     ref: "REF NO. 815-LAND",
     title: "COURTYARD",
+    alt: "Luxury Courtyard Interior Design by MSI Construction Delhi NCR",
     meta: "8,500 SQ FT • OUTDOOR SANCTUARY • 2022"
   },
   { 
-    src: "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png", 
+    src: "/GPT/Residential/Exterior/modern-residential-exterior-architecture.png",
     ref: "REF NO. 920-EXT",
     title: "FACADE",
+    alt: "Modern Residential Exterior Architecture Design Delhi",
     meta: "12,000 SQ FT • EXTERIOR ARCHITECTURE • 2024"
   },
   { 
-    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png", 
+    src: "/GPT/Residential/Kitchen/modular-kitchen-interior-design.png",
     ref: "REF NO. 402-KIT",
     title: "KITCHEN",
+    alt: "Modular Kitchen Interior Design by MSI Construction",
     meta: "1,200 SQ FT • MODERN INTERIOR • 2023"
   },
   { 
-    src: "/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png", 
+    src: "/GPT/Residential/Wardrobe/custom-wardrobe-closet-design.png",
     ref: "REF NO. 118-WAR",
     title: "CLOSET",
+    alt: "Custom Wardrobe and Closet Design MSI Construction",
     meta: "800 SQ FT • CUSTOM MILLWORK • 2023"
   },
   {
-    src: "/GPT/Residential/Bedroom/ChatGPT Image Jul 28, 2026, 06_31_04 AM.png",
+    src: "/GPT/Residential/Bedroom/luxury-bedroom-interior-design.png",
     ref: "REF NO. 304-BED",
     title: "BEDROOM",
+    alt: "Luxury Bedroom Interior Design by MSI Construction Delhi NCR",
     meta: "1,500 SQ FT • PRIVATE RETREAT • 2024"
   },
   {
-    src: "/GPT/Residential/Bathroom/ChatGPT Image Jul 28, 2026, 06_31_00 AM.png",
+    src: "/GPT/Residential/Bathroom/spa-inspired-bathroom-design.png",
     ref: "REF NO. 550-BTH",
     title: "BATHROOM",
+    alt: "Spa-Inspired Bathroom Design by MSI Construction",
     meta: "600 SQ FT • SPA INSPIRED • 2023"
   },
   {
-    src: "/GPT/Residential/Staircase/ChatGPT Image Jul 28, 2026, 06_56_32 AM.png",
+    src: "/GPT/Residential/Staircase/architectural-staircase-design.png",
     ref: "REF NO. 210-STR",
     title: "STAIRCASE",
+    alt: "Architectural Staircase Design Residential Construction",
     meta: "300 SQ FT • ARCHITECTURAL FEATURE • 2022"
   },
   {
-    src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_30_45 AM.png",
+    src: "/GPT/Residential/Living Room/open-concept-living-room-design.png",
     ref: "REF NO. 816-LIV",
     title: "LIVING SPACE",
+    alt: "Open Concept Living Room Interior Design Delhi NCR",
     meta: "2,000 SQ FT • OPEN CONCEPT • 2024"
   },
   {
-    src: "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_29_33 AM.png",
+    src: "/GPT/Residential/Exterior/residential-landscape-design.png",
     ref: "REF NO. 921-EXT",
     title: "EXTERIOR",
+    alt: "Residential Exterior and Landscape Design MSI Construction",
     meta: "15,000 SQ FT • LANDSCAPE DESIGN • 2023"
   },
   {
-    src: "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_30_55 AM.png",
+    src: "/GPT/Residential/Kitchen/modern-pantry-kitchen-storage.png",
     ref: "REF NO. 403-KIT",
     title: "PANTRY",
+    alt: "Modern Pantry and Kitchen Storage Design",
     meta: "400 SQ FT • FUNCTIONAL STORAGE • 2024"
   },
   {
-    src: "/GPT/Residential/Bedroom/ChatGPT Image Jul 28, 2026, 06_53_16 AM.png",
+    src: "/GPT/Residential/Bedroom/luxury-master-suite-design.png",
     ref: "REF NO. 305-BED",
     title: "MASTER SUITE",
+    alt: "Luxury Master Suite Bedroom Interior Design Delhi",
     meta: "2,200 SQ FT • LUXURY LIVING • 2023"
   },
   {
-    src: "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_53_04 AM.png",
+    src: "/GPT/Residential/Living Room/entertainment-lounge-interior.png",
     ref: "REF NO. 817-LIV",
     title: "LOUNGE",
+    alt: "Entertainment Lounge Interior Design by MSI Construction",
     meta: "1,800 SQ FT • ENTERTAINMENT HUB • 2022"
   }
 ];
@@ -189,7 +201,7 @@ export default function HeroCarousel() {
             <div className={styles.imgContainer}>
               <Image
                 src={currentImage.src}
-                alt={currentImage.title}
+                alt={currentImage.alt}
                 fill
                 className={styles.img}
                 sizes="(max-width: 1200px) 100vw, 1200px"

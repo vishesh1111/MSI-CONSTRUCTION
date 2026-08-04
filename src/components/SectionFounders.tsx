@@ -12,12 +12,12 @@ export default function SectionFounders({ isHomepage = false }: Props) {
     {
       name: "MOHD. TAUSIF",
       role: "Visionary",
-      image: "/img/tuasif.jpg"
+      image: "/img/tausif-founder-msi-construction.jpg"
     },
     {
       name: "SHUAIBH KHAN",
       role: "Visionary",
-      image: "/img/shuaibh-khan-new.jpg"
+      image: "/img/shuaibh-khan-msi-construction.jpg"
     }
   ];
 
