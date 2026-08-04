@@ -9,11 +9,11 @@ import styles from './Faq.module.css';
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions About Construction & Interior Design | MSI Construction',
   description: 'Get answers to common questions about construction costs, timelines, interior design process, and more. MSI Construction — 30+ years experience in Delhi NCR.',
-  alternates: { canonical: 'https://msiconstruction.in/faq' },
+  alternates: { canonical: 'https://www.msiconstruction.in/faq' },
   openGraph: { 
     title: 'Frequently Asked Questions About Construction & Interior Design | MSI Construction', 
     description: 'Get answers to common questions about construction costs, timelines, interior design process, and more. MSI Construction — 30+ years experience in Delhi NCR.', 
-    url: 'https://msiconstruction.in/faq', 
+    url: 'https://www.msiconstruction.in/faq', 
     type: 'website' 
   }
 };
@@ -67,8 +67,8 @@ export default function FaqPage() {
   }));
 
   const breadcrumbItems = [
-    { name: 'Home', item: 'https://msiconstruction.in/' },
-    { name: 'FAQ', item: 'https://msiconstruction.in/faq' }
+    { name: 'Home', item: 'https://www.msiconstruction.in/' },
+    { name: 'FAQ', item: 'https://www.msiconstruction.in/faq' }
   ];
 
   return (
@@ -76,11 +76,11 @@ export default function FaqPage() {
       <JsonLd type="webpage" data={{
         title: 'Frequently Asked Questions | MSI Construction',
         description: 'Get answers to common questions about construction costs, timelines, interior design process, and more.',
-        url: 'https://msiconstruction.in/faq'
+        url: 'https://www.msiconstruction.in/faq'
       }} />
       <JsonLd type="breadcrumb" data={{ items: [
-        { name: 'Home', url: 'https://msiconstruction.in' },
-        { name: 'FAQ', url: 'https://msiconstruction.in/faq' },
+        { name: 'Home', url: 'https://www.msiconstruction.in' },
+        { name: 'FAQ', url: 'https://www.msiconstruction.in/faq' },
       ]}} />
       <JsonLd type="faq" data={{ questions: faqs.map(faq => ({ q: faq.question, a: faq.answer })) }} />
       <Navbar />

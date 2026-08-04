@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin', '/admin/*', '/api/', '/api/*', '/_next/'],
     },
-    sitemap: 'https://msiconstruction.in/sitemap.xml',
+    sitemap: 'https://www.msiconstruction.in/sitemap.xml',
   };
 }

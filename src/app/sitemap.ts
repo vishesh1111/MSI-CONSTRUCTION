@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blog-data';
 
-const BASE_URL = 'https://msiconstruction.in';
+const BASE_URL = 'https://www.msiconstruction.in';
 
 const services = [
   'residential-construction',

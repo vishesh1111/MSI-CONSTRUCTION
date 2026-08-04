@@ -26,11 +26,11 @@ async function getVideoFiles(dir: string): Promise<string[]> {
 export const metadata: Metadata = {
   title: 'Construction & Interior Design Project Videos',
   description: 'Watch MSI Construction\'s project videos showcasing our residential, commercial, and interior design work across Delhi NCR. See our construction quality and craftsmanship in action.',
-  alternates: { canonical: 'https://msiconstruction.in/videos' },
+  alternates: { canonical: 'https://www.msiconstruction.in/videos' },
   openGraph: {
     title: 'Project Videos | MSI Construction',
     description: 'Watch our construction and interior design projects come to life.',
-    url: 'https://msiconstruction.in/videos',
+    url: 'https://www.msiconstruction.in/videos',
   },
 };
 

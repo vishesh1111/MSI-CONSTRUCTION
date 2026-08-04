@@ -48,10 +48,10 @@ export function generateMetadata({ params }: { params: { slug: string; location:
     openGraph: {
       title,
       description,
-      url: `https://msiconstruction.in/services/${params.slug}/${params.location}`,
+      url: `https://www.msiconstruction.in/services/${params.slug}/${params.location}`,
     },
     alternates: {
-      canonical: `https://msiconstruction.in/services/${params.slug}/${params.location}`,
+      canonical: `https://www.msiconstruction.in/services/${params.slug}/${params.location}`,
     }
   };
 }

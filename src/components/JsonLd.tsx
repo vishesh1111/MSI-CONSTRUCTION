@@ -10,8 +10,8 @@ export function JsonLd({ type, data }: JsonLdProps) {
 
   const businessDetails = {
     name: "MSI Construction",
-    url: "https://msiconstruction.in",
-    logo: "https://msiconstruction.in/img/MSI_cropped.png",
+    url: "https://www.msiconstruction.in",
+    logo: "https://www.msiconstruction.in/img/MSI_cropped.png",
     phone: "+919319444747",
     email: "info@msiconstruction.in",
     address: {

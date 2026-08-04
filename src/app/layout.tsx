@@ -30,21 +30,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://msiconstruction.in'),
+  metadataBase: new URL('https://www.msiconstruction.in'),
   title: {
     default: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR | 30+ Years',
     template: '%s | MSI Construction'
   },
   description: 'MSI Construction is a leading construction company and interior designer in Delhi NCR with 30+ years of experience. Residential, commercial & industrial construction, turnkey projects, and luxury interior design across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & all India. Call +91 93194 44747',
   keywords: ['construction company Delhi', 'construction company Noida', 'construction company near me', 'interior designer Delhi NCR', 'best construction company', 'commercial construction company', 'residential construction Delhi', 'turnkey construction company', 'industrial construction', 'office interior design', 'home renovation Delhi', 'building contractor', 'civil contractor Delhi', 'warehouse construction', 'factory construction', 'luxury interior designer'],
-  authors: [{ name: 'MSI Construction', url: 'https://msiconstruction.in' }],
+  authors: [{ name: 'MSI Construction', url: 'https://www.msiconstruction.in' }],
   creator: 'MSI Construction',
   publisher: 'MSI Construction',
   formatDetection: { telephone: true, email: true, address: true },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://msiconstruction.in',
+    url: 'https://www.msiconstruction.in',
     siteName: 'MSI Construction',
     title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR | 30+ Years',
     description: 'MSI Construction is a leading construction company and interior designer in Delhi NCR with 30+ years of experience. Residential, commercial & industrial construction, turnkey projects, and luxury interior design across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & all India. Call +91 93194 44747',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
       'max-snippet': -1
     }
   },
-  alternates: { canonical: 'https://msiconstruction.in' }
+  alternates: { canonical: 'https://www.msiconstruction.in' }
 };
 
 export default function RootLayout({

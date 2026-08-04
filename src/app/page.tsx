@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR',
   description: 'MSI Construction is a premier construction company and interior design firm in Delhi NCR with 30+ years of experience. We deliver residential, commercial & industrial construction, turnkey projects, and luxury interiors across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & pan-India. Get a free consultation — Call +91 93194 44747.',
-  alternates: { canonical: 'https://msiconstruction.in' },
+  alternates: { canonical: 'https://www.msiconstruction.in' },
 };
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <JsonLd type="webpage" data={{ title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR', description: 'Premier construction company and interior design firm in Delhi NCR with 30+ years of experience.', url: 'https://msiconstruction.in' }} />
+        <JsonLd type="webpage" data={{ title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR', description: 'Premier construction company and interior design firm in Delhi NCR with 30+ years of experience.', url: 'https://www.msiconstruction.in' }} />
         <JsonLd type="faq" data={{ questions: [
           { q: 'What is the cost of construction per sq ft in Delhi NCR?', a: 'Construction costs in Delhi NCR typically range from ₹1,800 to ₹4,500 per sq ft depending on the type of construction, materials used, and project specifications. MSI Construction provides detailed cost estimates after site assessment.' },
           { q: 'Which is the best construction company in Delhi NCR?', a: 'MSI Construction is one of the leading construction companies in Delhi NCR with over 30 years of experience, 1000+ completed projects across 42+ cities. We have delivered projects for JW Marriott, Taj Vivanta, and ITC Grand Chola.' },

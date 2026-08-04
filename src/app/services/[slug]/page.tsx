@@ -61,15 +61,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     <>
       <Navbar />
       <JsonLd type="breadcrumb" data={{ items: [
-        { name: 'Home', url: 'https://msiconstruction.in' },
-        { name: 'Services', url: 'https://msiconstruction.in/services' },
-        { name: service.title, url: `https://msiconstruction.in/services/${service.slug}` },
+        { name: 'Home', url: 'https://www.msiconstruction.in' },
+        { name: 'Services', url: 'https://www.msiconstruction.in/services' },
+        { name: service.title, url: `https://www.msiconstruction.in/services/${service.slug}` },
       ]}} />
       <JsonLd type="service" data={{
         name: service.title,
         serviceType: service.title,
         description: service.metaDescription,
-        url: `https://msiconstruction.in/services/${service.slug}`,
+        url: `https://www.msiconstruction.in/services/${service.slug}`,
       }} />
       <JsonLd type="faq" data={{ questions: service.faqs }} />
       

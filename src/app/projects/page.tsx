@@ -24,11 +24,11 @@ async function getFiles(dir: string): Promise<string[]> {
 export const metadata: Metadata = {
   title: 'Our Construction & Interior Design Projects — Portfolio',
   description: 'View MSI Construction\'s portfolio of completed residential, commercial, and interior design projects across Delhi NCR and India. See our work in luxury homes, offices, hotels, and more.',
-  alternates: { canonical: 'https://msiconstruction.in/projects' },
+  alternates: { canonical: 'https://www.msiconstruction.in/projects' },
   openGraph: {
     title: 'Project Portfolio | MSI Construction',
     description: 'Browse 1000+ completed construction and interior design projects across Delhi, Noida, Gurgaon & India.',
-    url: 'https://msiconstruction.in/projects',
+    url: 'https://www.msiconstruction.in/projects',
   },
 };
 

@@ -12,11 +12,11 @@ import styles from './Blog.module.css';
 export const metadata: Metadata = {
   title: 'Blog | MSI Construction - Insights & Guides',
   description: 'Read the latest insights, construction guides, interior design trends, and news from MSI Construction experts.',
-  alternates: { canonical: 'https://msiconstruction.in/blog' },
+  alternates: { canonical: 'https://www.msiconstruction.in/blog' },
   openGraph: { 
     title: 'Blog | MSI Construction', 
     description: 'Read the latest insights, construction guides, interior design trends, and news from MSI Construction experts.', 
-    url: 'https://msiconstruction.in/blog', 
+    url: 'https://www.msiconstruction.in/blog', 
     type: 'website' 
   }
 };
@@ -27,7 +27,7 @@ export default function BlogListingPage() {
       <JsonLd type="webpage" data={{
         title: 'Blog | MSI Construction',
         description: 'Read the latest insights, construction guides, interior design trends, and news from MSI Construction experts.',
-        url: 'https://msiconstruction.in/blog'
+        url: 'https://www.msiconstruction.in/blog'
       }} />
       <Navbar />
 

@@ -10,11 +10,11 @@ import styles from './CostEstimator.module.css';
 export const metadata: Metadata = {
   title: 'Construction Cost Estimator — Calculate Building Costs in Delhi NCR | MSI Construction',
   description: 'Use our free construction cost calculator to estimate building costs in Delhi, Noida, Gurgaon & NCR. Get instant estimates for residential, commercial & interior design projects.',
-  alternates: { canonical: 'https://msiconstruction.in/cost-estimator' },
+  alternates: { canonical: 'https://www.msiconstruction.in/cost-estimator' },
   openGraph: { 
     title: 'Construction Cost Estimator — Calculate Building Costs in Delhi NCR', 
     description: 'Use our free construction cost calculator to estimate building costs in Delhi, Noida, Gurgaon & NCR. Get instant estimates for residential, commercial & interior design projects.', 
-    url: 'https://msiconstruction.in/cost-estimator', 
+    url: 'https://www.msiconstruction.in/cost-estimator', 
     type: 'website' 
   }
 };
@@ -25,11 +25,11 @@ export default function CostEstimatorPage() {
       <JsonLd type="webpage" data={{
         title: 'Construction Cost Estimator',
         description: 'Use our free construction cost calculator to estimate building costs in Delhi, Noida, Gurgaon & NCR. Get instant estimates for residential, commercial & interior design projects.',
-        url: 'https://msiconstruction.in/cost-estimator'
+        url: 'https://www.msiconstruction.in/cost-estimator'
       }} />
       <JsonLd type="breadcrumb" data={{ items: [
-        { name: 'Home', url: 'https://msiconstruction.in' },
-        { name: 'Cost Estimator', url: 'https://msiconstruction.in/cost-estimator' },
+        { name: 'Home', url: 'https://www.msiconstruction.in' },
+        { name: 'Cost Estimator', url: 'https://www.msiconstruction.in/cost-estimator' },
       ]}} />
       <Navbar />
       <main className={styles.pageWrapper}>

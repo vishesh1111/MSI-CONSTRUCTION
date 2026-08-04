@@ -33,11 +33,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `https://msiconstruction.in/blog/${post.slug}` },
+    alternates: { canonical: `https://www.msiconstruction.in/blog/${post.slug}` },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
-      url: `https://msiconstruction.in/blog/${post.slug}`,
+      url: `https://www.msiconstruction.in/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
@@ -61,9 +61,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <main className={styles.main}>
       <JsonLd type="breadcrumb" data={{ items: [
-        { name: 'Home', url: 'https://msiconstruction.in' },
-        { name: 'Blog', url: 'https://msiconstruction.in/blog' },
-        { name: post.title, url: `https://msiconstruction.in/blog/${post.slug}` },
+        { name: 'Home', url: 'https://www.msiconstruction.in' },
+        { name: 'Blog', url: 'https://www.msiconstruction.in/blog' },
+        { name: post.title, url: `https://www.msiconstruction.in/blog/${post.slug}` },
       ]}} />
       <Navbar />
 
