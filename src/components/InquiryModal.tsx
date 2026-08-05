@@ -6,11 +6,11 @@ import Image from "next/image";
 import styles from "./InquiryModal.module.css";
 
 const showcaseImages = [
-  "/GPT/Residential/Living Room/ChatGPT Image Jul 28, 2026, 06_56_20 AM.png",
-  "/GPT/Commercial/ChatGPT Image Jul 28, 2026, 07_29_21 AM.png",
-  "/GPT/Residential/Exterior/ChatGPT Image Jul 28, 2026, 06_53_54 AM.png",
-  "/GPT/Residential/Kitchen/ChatGPT Image Jul 28, 2026, 06_28_42 AM.png",
-  "/GPT/Residential/Wardrobe/ChatGPT Image Jul 28, 2026, 06_54_16 AM.png"
+  "/GPT/Commercial/commercial-office-construction.png",
+  "/GPT/Residential/Bedroom/luxury-master-suite-design.png",
+  "/GPT/Residential/Exterior/residential-landscape-design.png",
+  "/GPT/Residential/Kitchen/modular-kitchen-interior-design.png",
+  "/GPT/Commercial/modern-office-interior-design.png"
 ];
 
 interface InquiryModalProps {
