@@ -32,6 +32,8 @@ export default function Footer() {
               <Link href="/blog">BLOG</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
               <Link href="/contact">CONTACT</Link>
+              <Link href="/best-construction-company-delhi-ncr" style={{marginTop: '0.5rem', color: 'var(--accent-gold)'}}>Top Construction Company</Link>
+              <Link href="/best-interior-designer-delhi-ncr" style={{color: 'var(--accent-gold)'}}>Top Interior Designer</Link>
             </div>
           </div>
 
