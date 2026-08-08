@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Best Interior Designer in Delhi NCR | MSI Construction',
   description: 'MSI Construction is the best interior designer and execution firm in Delhi NCR. We specialize in luxury residential, corporate offices, and 5-star hotel interiors. Book a consultation!',
   alternates: {
-    canonical: 'https://msiconstruction.in/best-interior-designer-delhi-ncr',
+    canonical: 'https://www.msiconstruction.in/best-interior-designer-delhi-ncr',
   }
 };
 
@@ -18,9 +18,9 @@ export default function BestInteriorDesignerPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'MSI Construction - Interior Design',
-    'image': 'https://msiconstruction.in/logo.png',
-    '@id': 'https://msiconstruction.in',
-    'url': 'https://msiconstruction.in/best-interior-designer-delhi-ncr',
+    'image': 'https://www.msiconstruction.in/logo.png',
+    '@id': 'https://www.msiconstruction.in',
+    'url': 'https://www.msiconstruction.in/best-interior-designer-delhi-ncr',
     'telephone': '+919319444747',
     'priceRange': '$$$$',
     'address': {

@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: location.metaTitle,
     description: location.metaDescription,
     alternates: {
-      canonical: `https://msiconstruction.com/locations/${location.slug}`,
+      canonical: `https://www.msiconstruction.in/locations/${location.slug}`,
     }
   };
 }
@@ -54,19 +54,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': 'https://msiconstruction.com'
+        'item': 'https://www.msiconstruction.in'
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'Locations',
-        'item': 'https://msiconstruction.com/locations'
+        'item': 'https://www.msiconstruction.in/locations'
       },
       {
         '@type': 'ListItem',
         'position': 3,
         'name': location.city,
-        'item': `https://msiconstruction.com/locations/${location.slug}`
+        'item': `https://www.msiconstruction.in/locations/${location.slug}`
       }
     ]
   };

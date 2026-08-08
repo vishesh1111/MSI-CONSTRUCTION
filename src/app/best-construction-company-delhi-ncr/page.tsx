@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Best Construction Company in Delhi NCR | MSI Construction',
   description: 'Looking for the best construction company in Delhi NCR? MSI Construction delivers luxury residential, commercial, and hospitality projects with 30+ years of expertise. Get a free quote today!',
   alternates: {
-    canonical: 'https://msiconstruction.in/best-construction-company-delhi-ncr',
+    canonical: 'https://www.msiconstruction.in/best-construction-company-delhi-ncr',
   }
 };
 
@@ -18,9 +18,9 @@ export default function BestConstructionCompanyPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     'name': 'MSI Construction',
-    'image': 'https://msiconstruction.in/logo.png',
-    '@id': 'https://msiconstruction.in',
-    'url': 'https://msiconstruction.in/best-construction-company-delhi-ncr',
+    'image': 'https://www.msiconstruction.in/logo.png',
+    '@id': 'https://www.msiconstruction.in',
+    'url': 'https://www.msiconstruction.in/best-construction-company-delhi-ncr',
     'telephone': '+919319444747',
     'priceRange': '$$$$',
     'address': {
