@@ -3,6 +3,7 @@ import "./globals.css";
 import { Playfair_Display, Montserrat, Fraunces, JetBrains_Mono, Inter } from "next/font/google";
 import WelcomeNotification from "@/components/WelcomeNotification";
 import { JsonLd } from "@/components/JsonLd";
+import Script from "next/script";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -88,6 +89,20 @@ export default function RootLayout({
         <JsonLd type="localBusiness" />
         {children}
         <WelcomeNotification />
+        
+        {/* Google Analytics Setup */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-JHGZSXNJ06" 
+          strategy="afterInteractive" 
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JHGZSXNJ06');
+          `}
+        </Script>
       </body>
     </html>
   );
