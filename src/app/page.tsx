@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR',
-  description: 'MSI Construction is a premier construction company and interior design firm in Delhi NCR with 30+ years of experience. We deliver residential, commercial & industrial construction, turnkey projects, and luxury interiors across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & pan-India. Get a free consultation — Call +91 93194 44747.',
+  description: 'Premier construction company & interior designer in Delhi NCR with 30+ years experience. Residential, commercial & industrial projects. Free consultation — Call +91 93194 44747.',
   alternates: { canonical: 'https://www.msiconstruction.in' },
 };
 

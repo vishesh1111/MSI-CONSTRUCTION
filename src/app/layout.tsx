@@ -33,10 +33,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.msiconstruction.in'),
   title: {
-    default: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR | 30+ Years',
+    default: 'MSI Construction — Best Builder & Interior Designer Delhi NCR',
     template: '%s | MSI Construction'
   },
-  description: 'MSI Construction is a leading construction company and interior designer in Delhi NCR with 30+ years of experience. Residential, commercial & industrial construction, turnkey projects, and luxury interior design across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & all India. Call +91 93194 44747',
+  description: 'MSI Construction — leading construction company & interior designer in Delhi NCR. 30+ years experience. Residential, commercial & industrial projects across Delhi, Noida, Gurgaon. Call +91 93194 44747',
   keywords: ['construction company Delhi', 'construction company Noida', 'construction company near me', 'interior designer Delhi NCR', 'best construction company', 'commercial construction company', 'residential construction Delhi', 'turnkey construction company', 'industrial construction', 'office interior design', 'home renovation Delhi', 'building contractor', 'civil contractor Delhi', 'warehouse construction', 'factory construction', 'luxury interior designer'],
   authors: [{ name: 'MSI Construction', url: 'https://www.msiconstruction.in' }],
   creator: 'MSI Construction',
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://www.msiconstruction.in',
     siteName: 'MSI Construction',
-    title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR | 30+ Years',
-    description: 'MSI Construction is a leading construction company and interior designer in Delhi NCR with 30+ years of experience. Residential, commercial & industrial construction, turnkey projects, and luxury interior design across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & all India. Call +91 93194 44747',
+    title: 'MSI Construction — Best Builder & Interior Designer Delhi NCR',
+    description: 'MSI Construction — leading construction company & interior designer in Delhi NCR. 30+ years experience. Residential, commercial & industrial projects across Delhi, Noida, Gurgaon. Call +91 93194 44747',
     images: [{ url: '/img/logo-v2.png', width: 384, height: 144, alt: 'MSI Construction - Best Construction Company & Interior Designer Delhi NCR' }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MSI Construction — Best Construction Company & Interior Designer in Delhi NCR | 30+ Years',
-    description: 'MSI Construction is a leading construction company and interior designer in Delhi NCR with 30+ years of experience. Residential, commercial & industrial construction, turnkey projects, and luxury interior design across Delhi, Noida, Gurgaon, Ghaziabad, Faridabad & all India. Call +91 93194 44747',
+    title: 'MSI Construction — Best Builder & Interior Designer Delhi NCR',
+    description: 'MSI Construction — leading construction company & interior designer in Delhi NCR. 30+ years experience. Residential, commercial & industrial projects across Delhi, Noida, Gurgaon. Call +91 93194 44747',
     images: ['/img/logo-v2.png']
   },
   robots: {

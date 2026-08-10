@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import SectionContact from '@/components/SectionContact';
 
 export const metadata: Metadata = {
-  title: 'Best Interior Designer in Delhi NCR | MSI Construction',
+  title: 'Best Interior Designer in Delhi NCR',
   description: 'MSI Construction is the best interior designer and execution firm in Delhi NCR. We specialize in luxury residential, corporate offices, and 5-star hotel interiors. Book a consultation!',
   alternates: {
     canonical: 'https://www.msiconstruction.in/best-interior-designer-delhi-ncr',

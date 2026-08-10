@@ -17,7 +17,7 @@ export const servicesData: ServiceData[] = [
     slug: 'residential-construction',
     title: 'Residential Construction',
     h1: 'Luxury Residential Construction in Delhi NCR',
-    metaTitle: 'Residential Construction Services | MSI Construction',
+    metaTitle: 'Residential Construction Services in Delhi NCR',
     metaDescription: 'Expert residential construction services in Delhi NCR. Over 30 years of experience delivering luxury homes, villas, and modern residential complexes.',
     heroDescription: 'Building dream homes with unmatched precision and luxury in the heart of Delhi NCR.',
     content: [
@@ -46,7 +46,7 @@ export const servicesData: ServiceData[] = [
     slug: 'commercial-construction',
     title: 'Commercial Construction',
     h1: 'Premier Commercial Construction Services',
-    metaTitle: 'Commercial Construction Company Delhi NCR | MSI Construction',
+    metaTitle: 'Commercial Construction Company in Delhi NCR',
     metaDescription: 'Leading commercial construction company. Delivering premium corporate offices, retail spaces, and hospitality projects with 30+ years of expertise.',
     heroDescription: 'Engineered for success, our commercial spaces combine aesthetic brilliance with functional efficiency.',
     content: [
@@ -75,7 +75,7 @@ export const servicesData: ServiceData[] = [
     slug: 'industrial-construction',
     title: 'Industrial Construction',
     h1: 'Advanced Industrial Construction Solutions',
-    metaTitle: 'Industrial Construction Services | MSI Construction',
+    metaTitle: 'Industrial Construction Services in Delhi NCR',
     metaDescription: 'Robust and scalable industrial construction solutions across India. Specializing in heavy manufacturing facilities and specialized complexes.',
     heroDescription: 'Building resilient infrastructures designed to power the next generation of industry.',
     content: [
@@ -104,7 +104,7 @@ export const servicesData: ServiceData[] = [
     slug: 'interior-design',
     title: 'Interior Design',
     h1: 'Bespoke Interior Design Services',
-    metaTitle: 'Luxury Interior Design Services Delhi NCR | MSI Construction',
+    metaTitle: 'Luxury Interior Design Services in Delhi NCR',
     metaDescription: 'Transform your spaces with MSI Construction\'s premium interior design services. Expert residential and commercial interior solutions.',
     heroDescription: 'Crafting immersive environments that perfectly balance aesthetic elegance and practical functionality.',
     content: [
@@ -133,7 +133,7 @@ export const servicesData: ServiceData[] = [
     slug: 'renovation-and-remodeling',
     title: 'Renovation & Remodeling',
     h1: 'Expert Renovation & Remodeling Services',
-    metaTitle: 'Home & Commercial Renovation Services | MSI Construction',
+    metaTitle: 'Home & Commercial Renovation Services in Delhi NCR',
     metaDescription: 'Breathe new life into your property with our comprehensive renovation and remodeling services in Delhi NCR. Upgrading spaces with modern luxury.',
     heroDescription: 'Revitalize your existing spaces with cutting-edge design and superior craftsmanship.',
     content: [
@@ -162,7 +162,7 @@ export const servicesData: ServiceData[] = [
     slug: 'turnkey-projects',
     title: 'Turnkey Projects',
     h1: 'End-to-End Turnkey Construction',
-    metaTitle: 'Turnkey Construction Contractors in Delhi NCR | MSI',
+    metaTitle: 'Turnkey Construction Contractors in Delhi NCR',
     metaDescription: 'From concept to handover, MSI Construction provides seamless turnkey project solutions. Single-point accountability for luxury builds.',
     heroDescription: 'Experience stress-free construction with our comprehensive concept-to-completion turnkey solutions.',
     content: [
@@ -191,7 +191,7 @@ export const servicesData: ServiceData[] = [
     slug: 'architecture-and-planning',
     title: 'Architecture & Planning',
     h1: 'Visionary Architecture & Master Planning',
-    metaTitle: 'Architectural & Planning Services | MSI Construction',
+    metaTitle: 'Architectural & Planning Services in Delhi NCR',
     metaDescription: 'Award-winning architecture and planning services. Creating innovative, sustainable, and functional designs for residential and commercial spaces.',
     heroDescription: 'Transforming ambitious visions into meticulously planned architectural realities.',
     content: [
@@ -220,7 +220,7 @@ export const servicesData: ServiceData[] = [
     slug: 'warehouse-construction',
     title: 'Warehouse Construction',
     h1: 'State-of-the-Art Warehouse Construction',
-    metaTitle: 'Warehouse Construction Contractors | MSI Construction',
+    metaTitle: 'Warehouse Construction Contractors in Delhi NCR',
     metaDescription: 'Specialized warehouse and logistics facility construction. Delivering high-capacity, durable, and optimized storage solutions across India.',
     heroDescription: 'Building high-performance logistics hubs optimized for capacity, speed, and durability.',
     content: [
@@ -249,7 +249,7 @@ export const servicesData: ServiceData[] = [
     slug: 'factory-construction',
     title: 'Factory Construction',
     h1: 'Advanced Factory & Manufacturing Facilities',
-    metaTitle: 'Factory Construction Services | MSI Construction',
+    metaTitle: 'Factory Construction Services in Delhi NCR',
     metaDescription: 'Expert factory construction contractors delivering optimized manufacturing facilities. 30+ years experience in heavy industrial builds.',
     heroDescription: 'Engineering resilient manufacturing environments built for operational excellence and scale.',
     content: [
@@ -278,7 +278,7 @@ export const servicesData: ServiceData[] = [
     slug: 'office-interior-design',
     title: 'Office Interior Design',
     h1: 'Corporate Office Interior Design',
-    metaTitle: 'Office Interior Designers in Delhi NCR | MSI',
+    metaTitle: 'Office Interior Designers in Delhi NCR',
     metaDescription: 'Transform your workspace with our corporate office interior design services. Fostering productivity and brand identity through innovative design.',
     heroDescription: 'Designing inspiring corporate workspaces that drive productivity, collaboration, and brand pride.',
     content: [
@@ -307,7 +307,7 @@ export const servicesData: ServiceData[] = [
     slug: 'home-renovation',
     title: 'Home Renovation',
     h1: 'Luxury Home Renovation Services',
-    metaTitle: 'Home Renovation Services Delhi NCR | MSI Construction',
+    metaTitle: 'Home Renovation Services in Delhi NCR',
     metaDescription: 'Upgrade your living space with our premium home renovation services. Specializing in luxury villas, apartments, and complete home makeovers.',
     heroDescription: 'Reimagine your home with our bespoke renovation services, blending modern luxury with timeless comfort.',
     content: [
@@ -336,7 +336,7 @@ export const servicesData: ServiceData[] = [
     slug: 'commercial-interior-design',
     title: 'Commercial Interior Design',
     h1: 'Premium Commercial Interior Design',
-    metaTitle: 'Commercial Interior Designers | MSI Construction',
+    metaTitle: 'Commercial Interior Designers in Delhi NCR',
     metaDescription: 'Elevate your business environment with expert commercial interior design. Tailored solutions for retail, hospitality, and corporate spaces.',
     heroDescription: 'Crafting captivating commercial environments that engage customers and elevate your brand presence.',
     content: [
@@ -365,7 +365,7 @@ export const servicesData: ServiceData[] = [
     slug: 'luxury-interior-design',
     title: 'Luxury Interior Design',
     h1: 'Exclusive Luxury Interior Design',
-    metaTitle: 'Luxury Interior Designers in Delhi NCR | MSI',
+    metaTitle: 'Luxury Interior Designers in Delhi NCR',
     metaDescription: 'Bespoke luxury interior design for ultra-premium residences and estates. Experience unparalleled elegance with MSI Construction.',
     heroDescription: 'Curating spaces of extraordinary elegance and exclusivity for the most discerning clients.',
     content: [

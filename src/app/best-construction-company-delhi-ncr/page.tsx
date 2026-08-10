@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import SectionContact from '@/components/SectionContact';
 
 export const metadata: Metadata = {
-  title: 'Best Construction Company in Delhi NCR | MSI Construction',
+  title: 'Best Construction Company in Delhi NCR',
   description: 'Looking for the best construction company in Delhi NCR? MSI Construction delivers luxury residential, commercial, and hospitality projects with 30+ years of expertise. Get a free quote today!',
   alternates: {
     canonical: 'https://www.msiconstruction.in/best-construction-company-delhi-ncr',

@@ -10,11 +10,11 @@ import { blogPosts } from '@/lib/blog-data';
 import styles from './Blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog | MSI Construction - Insights & Guides',
+  title: 'Blog — Construction Insights & Guides',
   description: 'Read the latest insights, construction guides, interior design trends, and news from MSI Construction experts.',
   alternates: { canonical: 'https://www.msiconstruction.in/blog' },
   openGraph: { 
-    title: 'Blog | MSI Construction', 
+    title: 'Blog — Construction Insights & Guides', 
     description: 'Read the latest insights, construction guides, interior design trends, and news from MSI Construction experts.', 
     url: 'https://www.msiconstruction.in/blog', 
     type: 'website' 
@@ -25,7 +25,7 @@ export default function BlogListingPage() {
   return (
     <main className={styles.main}>
       <JsonLd type="webpage" data={{
-        title: 'Blog | MSI Construction',
+        title: 'Blog — Construction Insights & Guides',
         description: 'Read the latest insights, construction guides, interior design trends, and news from MSI Construction experts.',
         url: 'https://www.msiconstruction.in/blog'
       }} />

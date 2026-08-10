@@ -16,7 +16,7 @@ export const locationsData: LocationData[] = [
     city: 'Delhi',
     state: 'Delhi',
     h1: 'Best Construction Company & Interior Designer in Delhi',
-    metaTitle: 'Top Construction Company & Interior Designers in Delhi | MSI Construction',
+    metaTitle: 'Top Construction Company & Interior Designers in Delhi',
     metaDescription: 'MSI Construction is the leading building contractor and interior designing firm in Delhi. 30+ years experience, 1000+ completed projects. Get a free consultation.',
     content: [
       'With over 30 years of excellence, MSI Construction stands as the premier construction and interior design firm in Delhi. Operating from our head office at Nangli Dairy, we have transformed the urban landscape of the capital with more than 1000 successful projects.',
@@ -42,7 +42,7 @@ export const locationsData: LocationData[] = [
     city: 'Noida',
     state: 'Uttar Pradesh',
     h1: 'Best Construction Company & Interior Designer in Noida',
-    metaTitle: 'Top Construction Company & Interior Designers in Noida | MSI Construction',
+    metaTitle: 'Top Construction Company & Interior Designers in Noida',
     metaDescription: 'Looking for the best construction company in Noida? MSI Construction offers premium building and interior design services. Over 1000 projects completed.',
     content: [
       'Noida\'s rapid urbanization demands construction partners who understand modern aesthetics and structural integrity. MSI Construction brings 30+ years of expertise to Noida, offering unparalleled building and interior design services.',
@@ -68,7 +68,7 @@ export const locationsData: LocationData[] = [
     city: 'Ghaziabad',
     state: 'Uttar Pradesh',
     h1: 'Best Construction Company & Interior Designer in Ghaziabad',
-    metaTitle: 'Top Construction Company & Interior Designers in Ghaziabad | MSI',
+    metaTitle: 'Top Construction Company & Interior Designers in Ghaziabad',
     metaDescription: 'MSI Construction delivers top-tier building and interior design services in Ghaziabad. Trusted for 30+ years. Contact us for your dream project.',
     content: [
       'As Ghaziabad continues to grow as a key residential and industrial hub in the NCR, MSI Construction provides the robust infrastructure and sophisticated design the city demands. We bring over 30 years of industry leadership to every site.',
@@ -94,7 +94,7 @@ export const locationsData: LocationData[] = [
     city: 'Gurgaon',
     state: 'Haryana',
     h1: 'Best Construction Company & Interior Designer in Gurgaon',
-    metaTitle: 'Top Construction Company & Interior Designers in Gurgaon | MSI',
+    metaTitle: 'Top Construction Company & Interior Designers in Gurgaon',
     metaDescription: 'MSI Construction offers premium luxury construction and interior design in Gurgaon. From Palam Vihar to commercial hubs. Over 30 years experience.',
     content: [
       'Gurgaon represents the pinnacle of modern luxury and corporate infrastructure. For over 30 years, MSI Construction has been at the forefront of this evolution, delivering architectural masterpieces across the Millennium City.',
@@ -120,7 +120,7 @@ export const locationsData: LocationData[] = [
     city: 'Faridabad',
     state: 'Haryana',
     h1: 'Best Construction Company & Interior Designer in Faridabad',
-    metaTitle: 'Top Construction Company & Interior Designers in Faridabad | MSI',
+    metaTitle: 'Top Construction Company & Interior Designers in Faridabad',
     metaDescription: 'Trusted construction and interior design services in Faridabad by MSI Construction. 30+ years of quality building. Contact us today.',
     content: [
       'Faridabad\'s unique blend of industrial heritage and growing residential sectors requires a nuanced approach to construction. MSI Construction brings 30+ years of versatile experience to meet these diverse needs.',
@@ -172,7 +172,7 @@ export const locationsData: LocationData[] = [
     city: 'Delhi NCR',
     state: 'Multi-state region',
     h1: 'Best Construction Company & Interior Designer in Delhi NCR',
-    metaTitle: 'Top Construction Company & Interior Designers in Delhi NCR | MSI',
+    metaTitle: 'Top Construction Company & Interior Designers in Delhi NCR',
     metaDescription: 'MSI Construction is the premier builder across the entire Delhi NCR region. 30+ years, 1000+ projects, unparalleled quality. Get a quote.',
     content: [
       'The National Capital Region represents one of the most dynamic real estate markets in the world. MSI Construction has been a foundational pillar of this growth for over 30 years, delivering unmatched excellence across borders.',

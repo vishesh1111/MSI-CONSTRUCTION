@@ -7,11 +7,11 @@ import FaqContent, { FAQ } from './FaqContent';
 import styles from './Faq.module.css';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions About Construction & Interior Design | MSI Construction',
+  title: 'Frequently Asked Questions About Construction & Interior Design',
   description: 'Get answers to common questions about construction costs, timelines, interior design process, and more. MSI Construction — 30+ years experience in Delhi NCR.',
   alternates: { canonical: 'https://www.msiconstruction.in/faq' },
   openGraph: { 
-    title: 'Frequently Asked Questions About Construction & Interior Design | MSI Construction', 
+    title: 'Frequently Asked Questions About Construction & Interior Design', 
     description: 'Get answers to common questions about construction costs, timelines, interior design process, and more. MSI Construction — 30+ years experience in Delhi NCR.', 
     url: 'https://www.msiconstruction.in/faq', 
     type: 'website' 

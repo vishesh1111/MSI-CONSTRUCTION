@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'how-much-does-it-cost-to-build-a-house-in-delhi-ncr',
     title: 'How Much Does It Cost to Build a House in Delhi NCR in 2026?',
-    metaTitle: 'House Construction Cost in Delhi NCR 2026 | MSI Construction',
+    metaTitle: 'House Construction Cost in Delhi NCR 2026 — Complete Guide',
     metaDescription: 'Discover the detailed breakdown of house construction costs in Delhi NCR for 2026. Learn about material costs, labor rates, and hidden expenses to plan your budget.',
     excerpt: 'A comprehensive guide to understanding the exact costs involved in building a home in the Delhi NCR region in 2026, from foundation to finishing.',
     author: 'MSI Construction Team',
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'top-10-interior-design-trends-2026',
     title: 'Top 10 Interior Design Trends for Indian Homes in 2026',
-    metaTitle: 'Top 10 Interior Design Trends 2026 | Indian Homes | MSI Construction',
+    metaTitle: 'Top 10 Interior Design Trends 2026 for Indian Homes',
     metaDescription: 'Explore the top 10 interior design trends dominating Indian homes in 2026. From sustainable materials to smart home integrations, elevate your living space.',
     excerpt: 'Discover the aesthetics and functional designs defining luxury interiors in 2026, tailored perfectly for modern Indian homes.',
     author: 'MSI Construction Team',
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'residential-vs-commercial-construction-differences',
     title: 'Residential vs. Commercial Construction: Key Differences',
-    metaTitle: 'Residential vs Commercial Construction Differences | MSI',
+    metaTitle: 'Residential vs Commercial Construction — Key Differences',
     metaDescription: 'Understand the key differences between residential and commercial construction, including codes, materials, timelines, and equipment used.',
     excerpt: 'A detailed comparison of residential and commercial building processes, helping you understand the complexities and requirements of each.',
     author: 'MSI Construction Team',
@@ -80,7 +80,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-choose-best-construction-company-delhi',
     title: 'How to Choose the Best Construction Company in Delhi',
-    metaTitle: 'Choose Best Construction Company in Delhi | MSI Construction',
+    metaTitle: 'How to Choose the Best Construction Company in Delhi',
     metaDescription: 'Learn how to select the right construction company in Delhi NCR for your project. Key factors to consider including portfolio, transparency, and reviews.',
     excerpt: 'An essential guide to vetting and selecting a reliable, high-quality construction partner for your residential or commercial project in Delhi.',
     author: 'MSI Construction Team',
@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'modular-kitchen-design-ideas-indian-homes',
     title: 'Modular Kitchen Design Ideas for Modern Indian Homes',
-    metaTitle: 'Modular Kitchen Design Ideas Indian Homes | MSI Construction',
+    metaTitle: 'Modular Kitchen Design Ideas for Indian Homes',
     metaDescription: 'Discover the latest modular kitchen design ideas perfect for Indian cooking styles. Explore layouts, materials, and smart storage solutions.',
     excerpt: 'Transform your cooking space with these functional and stylish modular kitchen designs, optimized for the unique needs of an Indian home.',
     author: 'MSI Construction Team',
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'construction-timeline-how-long-to-build-house',
     title: 'Construction Timeline: How Long Does It Take to Build a House?',
-    metaTitle: 'House Construction Timeline in India | MSI Construction',
+    metaTitle: 'House Construction Timeline in India — Complete Guide',
     metaDescription: 'Wondering how long it takes to build a house? Get a realistic phase-by-phase timeline for residential construction in India.',
     excerpt: 'A realistic, phase-by-phase breakdown of a residential construction timeline, helping you plan your move and manage expectations.',
     author: 'MSI Construction Team',
@@ -143,7 +143,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'turnkey-vs-regular-construction-which-is-better',
     title: 'Turnkey vs. Regular Construction: Which is Better?',
-    metaTitle: 'Turnkey vs Regular Construction Contracts | MSI Construction',
+    metaTitle: 'Turnkey vs Regular Construction Contracts — Which is Better',
     metaDescription: 'Compare Turnkey construction contracts with traditional methods. Understand the pros, cons, and which approach is best for your next project.',
     excerpt: 'Deciding between hiring a turnkey contractor or managing multiple vendors? We break down the pros and cons to help you make the best choice.',
     author: 'MSI Construction Team',
@@ -164,7 +164,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'office-interior-design-tips-modern-workplace',
     title: 'Office Interior Design Tips for the Modern Workplace',
-    metaTitle: 'Modern Office Interior Design Tips | MSI Construction',
+    metaTitle: 'Modern Office Interior Design Tips for 2026',
     metaDescription: 'Create a productive and inspiring modern workplace with these office interior design tips. Focus on ergonomics, collaborative spaces, and branding.',
     excerpt: 'Boost productivity and employee satisfaction with innovative interior design strategies tailored for the modern, dynamic office environment.',
     author: 'MSI Construction Team',

@@ -61,7 +61,19 @@ export default function AboutPage() {
       <main className={styles.main}>
 
 
-        {/* New Why Choose Us Timeline */}
+        {/* Hero H1 */}
+        <section className={styles.whySection}>
+          <div className={styles.container}>
+            <Reveal>
+              <h1 className={styles.sectionTitle}>
+                ABOUT <span className={styles.italic}>MSI CONSTRUCTION</span>
+              </h1>
+              <div className={styles.titleLine}></div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Why Choose Us Timeline */}
         <section className={styles.whySection}>
           <div className={styles.container}>
             <Reveal>

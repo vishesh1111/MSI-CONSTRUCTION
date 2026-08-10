@@ -8,7 +8,7 @@ import CostEstimatorTool from './CostEstimatorTool';
 import styles from './CostEstimator.module.css';
 
 export const metadata: Metadata = {
-  title: 'Construction Cost Estimator — Calculate Building Costs in Delhi NCR | MSI Construction',
+  title: 'Construction Cost Estimator — Calculate Building Costs in Delhi NCR',
   description: 'Use our free construction cost calculator to estimate building costs in Delhi, Noida, Gurgaon & NCR. Get instant estimates for residential, commercial & interior design projects.',
   alternates: { canonical: 'https://www.msiconstruction.in/cost-estimator' },
   openGraph: { 

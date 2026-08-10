@@ -54,9 +54,9 @@ export default function ServicesPage() {
         <section className={styles.servicesSection}>
           <div className={styles.container}>
             <Reveal>
-              <h2 className={styles.sectionTitle}>
+              <h1 className={styles.sectionTitle}>
                 OUR CORE SERVICES <span className={styles.italic}>INCLUDE:</span>
-              </h2>
+              </h1>
               <div className={styles.titleLine}></div>
               <h3 className={styles.subHeading}>Building Construction:</h3>
             </Reveal>
