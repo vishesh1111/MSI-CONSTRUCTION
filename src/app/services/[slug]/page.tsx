@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    alternates: {
+      canonical: `https://www.msiconstruction.in/services/${service.slug}`,
+    },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,

@@ -65,12 +65,7 @@ export function JsonLd({ type, data }: JsonLdProps) {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": businessDetails.name,
-        "url": businessDetails.url,
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": `${businessDetails.url}/search?q={search_term_string}`,
-          "query-input": "required name=search_term_string"
-        }
+        "url": businessDetails.url
       };
       break;
     case 'localBusiness':

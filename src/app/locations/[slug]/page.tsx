@@ -107,7 +107,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <section className={styles.services}>
           <h2>Our Services in {location.city}</h2>
           <div className={styles.servicesGrid}>
-            <Link href="/services/construction" className={styles.serviceCard}>
+            <Link href="/services/residential-construction" className={styles.serviceCard}>
               <h3>Residential Construction</h3>
               <p>Premium home building services in {location.city}, delivering luxury and structural integrity.</p>
             </Link>
@@ -115,7 +115,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <h3>Interior Design</h3>
               <p>Bespoke interior styling for homes and offices across {location.city}.</p>
             </Link>
-            <Link href="/services/commercial" className={styles.serviceCard}>
+            <Link href="/services/commercial-construction" className={styles.serviceCard}>
               <h3>Commercial Construction</h3>
               <p>State-of-the-art corporate offices and retail spaces built to exact specifications.</p>
             </Link>
