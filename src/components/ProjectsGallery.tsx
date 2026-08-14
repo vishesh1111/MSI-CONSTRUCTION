@@ -108,7 +108,7 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
             >
               <Image
                 src={selectedImage.src}
-                alt={selectedImage.filename}
+                alt={`${selectedImage.subcategory || selectedImage.category} Design by MSI Construction Delhi NCR`}
                 fill
                 className={styles.lightboxImg}
                 sizes="100vw"
@@ -185,7 +185,7 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
                 <div className={styles.imageWrapper}>
                   <Image
                     src={project.src}
-                    alt={project.filename}
+                    alt={`${project.subcategory || project.category} - MSI Construction Portfolio`}
                     fill
                     className={styles.img}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

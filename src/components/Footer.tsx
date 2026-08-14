@@ -30,6 +30,8 @@ export default function Footer() {
               <Link href="/services">SERVICES</Link>
               <Link href="/projects">PROJECTS</Link>
               <Link href="/blog">BLOG</Link>
+              <Link href="/faq">FAQ</Link>
+              <Link href="/cost-estimator">COST ESTIMATOR</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
               <Link href="/contact">CONTACT</Link>
               <Link href="/best-construction-company-delhi-ncr" style={{marginTop: '0.5rem', color: 'var(--accent-gold)'}}>Top Construction Company</Link>

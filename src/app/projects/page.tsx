@@ -52,7 +52,13 @@ export default async function ProjectsPage() {
         const category = parts[2] || "Others";
         // If there's a subcategory (e.g., Bedroom)
         const subcategory = parts.length > 4 ? parts[3] : undefined;
-        const filename = parts[parts.length - 1].replace(".png", "").replace(".jpg", "");
+        const rawFilename = parts[parts.length - 1].replace(".png", "").replace(".jpg", "");
+        
+        // Generate descriptive alt text instead of using raw filenames
+        const isGenericName = rawFilename.toLowerCase().startsWith('chatgpt');
+        const filename = isGenericName
+          ? `${subcategory || category} Interior Design by MSI Construction`
+          : rawFilename.replace(/[-_]/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 
         return {
           src: relativePath.replace(/\\/g, "/"), // Ensure web-safe slashes
@@ -66,7 +72,7 @@ export default async function ProjectsPage() {
   }
 
   // Use the specific office interior image requested by the user, or fallback
-  const targetImage = "/GPT/Commercial/ChatGPT Image Jul 28, 2026, 07_29_21 AM.png";
+  const targetImage = "/GPT/Commercial/commercial-office-wooden-slat-ceiling-construction.png";
   const bgImage = projects.find((p) => p.src === targetImage)?.src || projects.find((p) => p.category === "Commercial")?.src || "/img/residential-exterior-construction.jpg";
 
   return (
@@ -77,7 +83,7 @@ export default async function ProjectsPage() {
           <div className={styles.heroBackground}>
             <Image
               src={bgImage}
-              alt="Background"
+              alt="MSI Construction Project Portfolio - Commercial and Interior Design Work"
               fill
               className={styles.heroImg}
               priority

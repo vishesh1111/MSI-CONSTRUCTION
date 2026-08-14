@@ -25,10 +25,8 @@ export default function Navbar() {
         setActiveSection("contact");
       } else if (pathname === "/videos") {
         setActiveSection("videos");
-      } else if (pathname === "/faq") {
-        setActiveSection("faq");
-      } else if (pathname === "/cost-estimator") {
-        setActiveSection("estimator");
+      } else if (pathname === "/blog") {
+        setActiveSection("blog");
       } else {
         setActiveSection("");
       }
@@ -71,13 +69,12 @@ export default function Navbar() {
             </Link>
 
             <nav className={styles.nav}>
-              <Link href="/#home" className={activeSection === "home" ? styles.active : ""}>HOME</Link>
+              <Link href="/" className={activeSection === "home" ? styles.active : ""}>HOME</Link>
               <Link href="/about" className={activeSection === "about" || activeSection === "about-2" ? styles.active : ""}>ABOUT</Link>
               <Link href="/services" className={activeSection === "services" ? styles.active : ""}>SERVICES</Link>
-              <Link href="/projects?filter=RESIDENTIAL" className={activeSection === "projects" ? styles.active : ""}>PROJECTS</Link>
+              <Link href="/projects" className={activeSection === "projects" ? styles.active : ""}>PROJECTS</Link>
+              <Link href="/blog" className={activeSection === "blog" ? styles.active : ""}>BLOG</Link>
               <Link href="/videos" className={activeSection === "videos" ? styles.active : ""}>VIDEOS</Link>
-              <Link href="/faq" className={activeSection === "faq" ? styles.active : ""}>FAQ</Link>
-              <Link href="/cost-estimator" className={activeSection === "estimator" ? styles.active : ""}>ESTIMATOR</Link>
               <a href="/msi-profile.pdf" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
               <Link href="/contact" className={activeSection === "contact" ? styles.active : ""}>CONTACT</Link>
             </nav>

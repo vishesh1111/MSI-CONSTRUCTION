@@ -28,9 +28,10 @@ export function generateStaticParams() {
   return params;
 }
 
-export function generateMetadata({ params }: { params: { slug: string; location: string } }): Metadata {
-  const service = servicesData?.find((s: any) => s.slug === params.slug);
-  const location = locationsData?.find((l: any) => l.slug === params.location);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; location: string }> }): Promise<Metadata> {
+  const { slug, location: locationSlug } = await params;
+  const service = servicesData?.find((s: any) => s.slug === slug);
+  const location = locationsData?.find((l: any) => l.slug === locationSlug);
 
   if (!service || !location) {
     return {
@@ -48,10 +49,10 @@ export function generateMetadata({ params }: { params: { slug: string; location:
     openGraph: {
       title,
       description,
-      url: `https://www.msiconstruction.in/services/${params.slug}/${params.location}`,
+      url: `https://www.msiconstruction.in/services/${slug}/${locationSlug}`,
     },
     alternates: {
-      canonical: `https://www.msiconstruction.in/services/${params.slug}/${params.location}`,
+      canonical: `https://www.msiconstruction.in/services/${slug}/${locationSlug}`,
     }
   };
 }
@@ -82,9 +83,10 @@ function generateComboFaqs(service: any, location: any) {
   });
 }
 
-export default function ComboPage({ params }: { params: { slug: string; location: string } }) {
-  const service = servicesData?.find((s: any) => s.slug === params.slug);
-  const location = locationsData?.find((l: any) => l.slug === params.location);
+export default async function ComboPage({ params }: { params: Promise<{ slug: string; location: string }> }) {
+  const { slug, location: locationSlug } = await params;
+  const service = servicesData?.find((s: any) => s.slug === slug);
+  const location = locationsData?.find((l: any) => l.slug === locationSlug);
 
   if (!service || !location) {
     notFound();

@@ -44,7 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/faq`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/cost-estimator`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/best-construction-company-delhi-ncr`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/best-interior-designer-delhi-ncr`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 }
+    { url: `${BASE_URL}/best-interior-designer-delhi-ncr`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/locations`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 }
   );
 
   // Service pages
@@ -64,6 +65,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+    });
+  });
+
+  // Service + Location combo pages (91 combinations)
+  services.forEach((service) => {
+    locations.forEach((location) => {
+      sitemapData.push({
+        url: `${BASE_URL}/services/${service}/${location}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      });
     });
   });
 

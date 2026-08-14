@@ -25,16 +25,16 @@ export default function BestInteriorDesignerPage() {
     'priceRange': '$$$$',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': 'D-62, Sector 10',
-      'addressLocality': 'Noida',
-      'addressRegion': 'UP',
-      'postalCode': '201301',
+      'streetAddress': 'Plot No -210, Gali No-05, Golden Ranaji Enclave, Nangli Dairy',
+      'addressLocality': 'New Delhi',
+      'addressRegion': 'Delhi',
+      'postalCode': '110043',
       'addressCountry': 'IN'
     },
     'geo': {
       '@type': 'GeoCoordinates',
-      'latitude': 28.5843,
-      'longitude': 77.3331
+      'latitude': 28.6821,
+      'longitude': 77.0627
     },
     'description': 'Top-rated interior design and execution firm in Delhi NCR. Specialists in high-end woodwork, luxury residential, and hospitality interiors.'
   };
