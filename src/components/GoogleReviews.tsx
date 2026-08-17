@@ -96,7 +96,7 @@ export default function GoogleReviews() {
             <div className={styles.reviewCount}>Based on 38 reviews</div>
           </div>
           <a
-            href="http://google.com/maps/place/MSI+CONSTRUCTION/@28.589581,76.993804,1015m/data=!3m1!1e3!4m16!1m9!3m8!1s0x390d056fe43ce035:0x6e808a308c855eb5!2sMSI+CONSTRUCTION!8m2!3d28.589581!4d76.993804!9m1!1b1!16s%2Fg%2F11trdjgfl5!3m5!1s0x390d056fe43ce035:0x6e808a308c855eb5!8m2!3d28.589581!4d76.993804!16s%2Fg%2F11trdjgfl5?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+            href="https://google.com/maps/place/MSI+CONSTRUCTION/@28.589581,76.993804,1015m/data=!3m1!1e3!4m16!1m9!3m8!1s0x390d056fe43ce035:0x6e808a308c855eb5!2sMSI+CONSTRUCTION!8m2!3d28.589581!4d76.993804!9m1!1b1!16s%2Fg%2F11trdjgfl5!3m5!1s0x390d056fe43ce035:0x6e808a308c855eb5!8m2!3d28.589581!4d76.993804!16s%2Fg%2F11trdjgfl5?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.googleLink}
