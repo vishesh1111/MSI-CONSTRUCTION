@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blog-data';
 
+// Regenerate sitemap every 3 days so lastModified dates stay fresh
+export const revalidate = 259200;
+
 const BASE_URL = 'https://www.msiconstruction.in';
 
 const services = [
